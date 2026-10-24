@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-24",
+  "commit": "ea78bd23477dd7d83a2216a54eacfa05b2a8afc9",
+  "run": "https://github.com/trendyspenders-hub/BeavisButthead/actions/runs/40120416123",
+  "runner": "macOS 14.8.9 arm64, Xcode 15.4",
+  "au": "universal arm64/x86_64 build PASS",
+  "vst3": "universal arm64/x86_64 build PASS",
+  "packaging": "PKG and DMG PASS",
+  "installation": "macOS installer PASS",
+  "audio_unit_validation": "AU VALIDATION SUCCEEDED",
+  "vst3_validator": "NOT RUN",
+  "signatures": "ad-hoc bundle signature checks PASS; installer unsigned; not notarized",
+  "pro_tools": "excluded",
+  "artifact_sha256": "b5d65a317b5563e1777f00b0c8bf5a62c94bc8539bce76c30f161fd01c701479"
+}
