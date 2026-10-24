@@ -1,0 +1,11 @@
+iPlug2/
+eigen/
+AudioDSPTools/
+NeuralAmpModelerCore/
+mac-build-*/
+mac-release-*/
+smoke-build/
+__pycache__/
+*.p12
+*.pfx
+*.key

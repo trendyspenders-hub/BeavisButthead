@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-24",
+  "environment": "Linux",
+  "shared_audio_cases_passed": 288,
+  "pedal_tests": "PASS",
+  "state_reader_tests": "PASS",
+  "preview_dom_tests": "PASS",
+  "signing_flow_mock_tests": "PASS (no real signing)",
+  "shell_syntax": "PASS",
+  "mac_native_build": "NOT RUN",
+  "apple_signing_notarization": "NOT RUN: certificates and macOS unavailable",
+  "aax_build_signing": "NOT RUN: SDK and PACE setup unavailable",
+  "pro_tools_host_tests": "NOT RUN"
+}

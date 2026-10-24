@@ -1,0 +1,1152 @@
+Running: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m cmake -S /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore -B /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core -DCMAKE_BUILD_TYPE=Release
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core
+Running: /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m cmake --build /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core --target render -j 2
+[  6%] Building CXX object tools/CMakeFiles/render.dir/render.cpp.o
+[ 13%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/activations.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/render.cpp:12:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/tools/../NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.cpp:1:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::type’ should be initialized in the member initialization list [-Weffc++]
+   43 | struct ActivationConfig
+      |        ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.cpp: In static member function ‘static nam::activations::ActivationConfig nam::activations::ActivationConfig::simple(nam::activations::ActivationType)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.cpp:54:20: note: synthesized method ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’ first required here
+   54 |   ActivationConfig config;
+      |                    ^~~~~~
+[ 20%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/container.cpp.o
+[ 26%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/conv1d.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.h:9,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.cpp:6:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.cpp: In constructor ‘nam::container::ContainerModel::ContainerModel(std::vector<nam::container::Submodel>, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.cpp:19:1: warning: ‘nam::container::ContainerModel::_slim_set_mutex’ should be initialized in the member initialization list [-Weffc++]
+   19 | ContainerModel::ContainerModel(std::vector<Submodel> submodels, const double expected_sample_rate)
+      | ^~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.h: In instantiation of ‘std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = nam::container::ContainerConfig; _Args = {}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<nam::container::ContainerConfig>]’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.cpp:142:45:   required from here
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.h:53:8: warning: ‘nam::container::ContainerConfig::raw_config’ should be initialized in the member initialization list [-Weffc++]
+   53 | struct ContainerConfig : public ModelConfig
+      |        ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.h:53:8: warning: ‘nam::container::ContainerConfig::sample_rate’ should be initialized in the member initialization list [-Weffc++]
+In file included from /usr/include/c++/13/memory:78,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/container.h:4:
+/usr/include/c++/13/bits/unique_ptr.h:1070:30: note: synthesized method ‘nam::container::ContainerConfig::ContainerConfig()’ first required here
+ 1070 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:5,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.cpp:1:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h: In constructor ‘nam::RingBuffer::RingBuffer()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h:15:3: warning: ‘nam::RingBuffer::_storage’ should be initialized in the member initialization list [-Weffc++]
+   15 |   RingBuffer() {};
+      |   ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h: In constructor ‘nam::Conv1D::Conv1D()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   20 |   Conv1D()
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h: In constructor ‘nam::Conv1D::Conv1D(int, int, int, int, int, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   33 |   Conv1D(const int in_channels, const int out_channels, const int kernel_size, const int bias, const int dilation,
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+[ 33%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/convnet.cpp.o
+[ 40%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/dsp.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:10:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:5,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:13,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:12:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h: In constructor ‘nam::RingBuffer::RingBuffer()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h:15:3: warning: ‘nam::RingBuffer::_storage’ should be initialized in the member initialization list [-Weffc++]
+   15 |   RingBuffer() {};
+      |   ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h: In constructor ‘nam::Conv1D::Conv1D()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   20 |   Conv1D()
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:20:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h: In constructor ‘nam::Conv1D::Conv1D(int, int, int, int, int, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   33 |   Conv1D(const int in_channels, const int out_channels, const int kernel_size, const int bias, const int dilation,
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/conv1d.h:33:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h: In constructor ‘nam::convnet::BatchNorm::BatchNorm()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:30:3: warning: ‘nam::convnet::BatchNorm::scale’ should be initialized in the member initialization list [-Weffc++]
+   30 |   BatchNorm() {};
+      |   ^~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:30:3: warning: ‘nam::convnet::BatchNorm::loc’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h: In constructor ‘nam::convnet::ConvNetBlock::ConvNetBlock()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:60:3: warning: ‘nam::convnet::ConvNetBlock::conv’ should be initialized in the member initialization list [-Weffc++]
+   60 |   ConvNetBlock() {};
+      |   ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:60:3: warning: ‘nam::convnet::ConvNetBlock::batchnorm’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:60:3: warning: ‘nam::convnet::ConvNetBlock::activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:60:3: warning: ‘nam::convnet::ConvNetBlock::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h: In constructor ‘nam::convnet::_Head::_Head()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:111:3: warning: ‘nam::convnet::_Head::_weight’ should be initialized in the member initialization list [-Weffc++]
+  111 |   _Head() {};
+      |   ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:111:3: warning: ‘nam::convnet::_Head::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp: In constructor ‘nam::convnet::BatchNorm::BatchNorm(int, std::vector<float>::iterator&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:14:1: warning: ‘nam::convnet::BatchNorm::scale’ should be initialized in the member initialization list [-Weffc++]
+   14 | nam::convnet::BatchNorm::BatchNorm(const int dim, std::vector<float>::iterator& weights)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:14:1: warning: ‘nam::convnet::BatchNorm::loc’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp: In constructor ‘nam::convnet::_Head::_Head(int, int, std::vector<float>::iterator&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:133:1: warning: ‘nam::convnet::_Head::_weight’ should be initialized in the member initialization list [-Weffc++]
+  133 | nam::convnet::_Head::_Head(const int in_channels, const int out_channels, std::vector<float>::iterator& weights)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:133:1: warning: ‘nam::convnet::_Head::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp: In constructor ‘nam::convnet::ConvNet::ConvNet(int, int, int, const std::vector<int>&, bool, const nam::activations::ActivationConfig&, std::vector<float>&, double, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:176:1: warning: ‘nam::convnet::ConvNet::_blocks’ should be initialized in the member initialization list [-Weffc++]
+  176 | nam::convnet::ConvNet::ConvNet(const int in_channels, const int out_channels, const int channels,
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:176:1: warning: ‘nam::convnet::ConvNet::_block_vals’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:176:1: warning: ‘nam::convnet::ConvNet::_head_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:176:1: warning: ‘nam::convnet::ConvNet::_head’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h: In constructor ‘constexpr nam::convnet::ConvNetConfig::ConvNetConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::channels’ should be initialized in the member initialization list [-Weffc++]
+  169 | struct ConvNetConfig : public ModelConfig
+      |        ^~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::dilations’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::batchnorm’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::type’ should be initialized in the member initialization list [-Weffc++]
+   43 | struct ActivationConfig
+      |        ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h: In constructor ‘constexpr nam::convnet::ConvNetConfig::ConvNetConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: note: synthesized method ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’ first required here
+  169 | struct ConvNetConfig : public ModelConfig
+      |        ^~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::in_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.h:169:8: warning: ‘nam::convnet::ConvNetConfig::out_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp: In function ‘nam::convnet::ConvNetConfig nam::convnet::parse_config_json(const nlohmann::json_abi_v3_12_0::json&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/convnet.cpp:328:17: note: synthesized method ‘constexpr nam::convnet::ConvNetConfig::ConvNetConfig()’ first required here
+  328 |   ConvNetConfig c;
+      |                 ^
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:11:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp: In constructor ‘nam::DSP::DSP(int, int, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:19:1: warning: ‘nam::DSP::mInputLevel’ should be initialized in the member initialization list [-Weffc++]
+   19 | nam::DSP::DSP(const int in_channels, const int out_channels, const double expected_sample_rate)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:19:1: warning: ‘nam::DSP::mOutputLevel’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp: In constructor ‘nam::Buffer::Buffer(int, int, int, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:149:1: warning: ‘nam::Buffer::_receptive_field’ should be initialized in the member initialization list [-Weffc++]
+  149 | nam::Buffer::Buffer(const int in_channels, const int out_channels, const int receptive_field,
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:149:1: warning: ‘nam::Buffer::_input_buffer_offset’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:149:1: warning: ‘nam::Buffer::_input_buffers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:149:1: warning: ‘nam::Buffer::_output_buffers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp: In constructor ‘nam::Linear::Linear(int, int, int, bool, const std::vector<float>&, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:255:1: warning: ‘nam::Linear::_weight’ should be initialized in the member initialization list [-Weffc++]
+  255 | nam::Linear::Linear(const int in_channels, const int out_channels, const int receptive_field, const bool _bias,
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:255:1: warning: ‘nam::Linear::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h: In constructor ‘constexpr nam::linear::LinearConfig::LinearConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:274:8: warning: ‘nam::linear::LinearConfig::receptive_field’ should be initialized in the member initialization list [-Weffc++]
+  274 | struct LinearConfig : public ModelConfig
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:274:8: warning: ‘nam::linear::LinearConfig::bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:274:8: warning: ‘nam::linear::LinearConfig::in_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:274:8: warning: ‘nam::linear::LinearConfig::out_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp: In function ‘nam::linear::LinearConfig nam::linear::parse_config_json(const nlohmann::json_abi_v3_12_0::json&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:307:16: note: synthesized method ‘constexpr nam::linear::LinearConfig::LinearConfig()’ first required here
+  307 |   LinearConfig c;
+      |                ^
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp: In constructor ‘nam::Conv1x1::Conv1x1(int, int, bool, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_weight’ should be initialized in the member initialization list [-Weffc++]
+  342 | nam::Conv1x1::Conv1x1(const int in_channels, const int out_channels, const bool _bias, const int groups)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.cpp:342:1: warning: ‘nam::Conv1x1::_do_bias’ should be initialized in the member initialization list [-Weffc++]
+[ 46%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/get_dsp.cpp.o
+[ 53%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/lstm.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/get_dsp.cpp:8:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h: In constructor ‘nam::dspData::dspData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::version’ should be initialized in the member initialization list [-Weffc++]
+  377 | struct dspData
+      |        ^~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::architecture’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::config’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::metadata’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::weights’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:377:8: warning: ‘nam::dspData::expected_sample_rate’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/get_dsp.cpp: In function ‘std::unique_ptr<nam::DSP> nam::get_dsp(std::filesystem::__cxx11::path)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/get_dsp.cpp:144:11: note: synthesized method ‘nam::dspData::dspData()’ first required here
+  144 |   dspData temp;
+      |           ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/registry.h:14,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:6:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘constexpr nam::ModelMetadata::ModelMetadata()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:22:8: warning: ‘nam::ModelMetadata::version’ should be initialized in the member initialization list [-Weffc++]
+   22 | struct ModelMetadata
+      |        ^~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:22:8: warning: ‘nam::ModelMetadata::loudness’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:22:8: warning: ‘nam::ModelMetadata::input_level’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:22:8: warning: ‘nam::ModelMetadata::output_level’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/get_dsp.cpp: In function ‘std::unique_ptr<nam::DSP> nam::get_dsp(dspData&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/get_dsp.cpp:242:17: note: synthesized method ‘constexpr nam::ModelMetadata::ModelMetadata()’ first required here
+  242 |   ModelMetadata metadata;
+      |                 ^~~~~~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp: In constructor ‘nam::lstm::LSTMCell::LSTMCell(int, int, std::vector<float>::iterator&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:9:1: warning: ‘nam::lstm::LSTMCell::_w’ should be initialized in the member initialization list [-Weffc++]
+    9 | nam::lstm::LSTMCell::LSTMCell(const int input_size, const int hidden_size, std::vector<float>::iterator& weights)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:9:1: warning: ‘nam::lstm::LSTMCell::_b’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:9:1: warning: ‘nam::lstm::LSTMCell::_xh’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:9:1: warning: ‘nam::lstm::LSTMCell::_ifgo’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:9:1: warning: ‘nam::lstm::LSTMCell::_c’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp: In constructor ‘nam::lstm::LSTM::LSTM(int, int, int, int, int, std::vector<float>&, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:68:1: warning: ‘nam::lstm::LSTM::_head_weight’ should be initialized in the member initialization list [-Weffc++]
+   68 | nam::lstm::LSTM::LSTM(const int in_channels, const int out_channels, const int num_layers, const int input_size,
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:68:1: warning: ‘nam::lstm::LSTM::_head_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:68:1: warning: ‘nam::lstm::LSTM::_layers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:68:1: warning: ‘nam::lstm::LSTM::_input’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:68:1: warning: ‘nam::lstm::LSTM::_output’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:7:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h: In constructor ‘constexpr nam::lstm::LSTMConfig::LSTMConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h:99:8: warning: ‘nam::lstm::LSTMConfig::num_layers’ should be initialized in the member initialization list [-Weffc++]
+   99 | struct LSTMConfig : public ModelConfig
+      |        ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h:99:8: warning: ‘nam::lstm::LSTMConfig::input_size’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h:99:8: warning: ‘nam::lstm::LSTMConfig::hidden_size’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h:99:8: warning: ‘nam::lstm::LSTMConfig::in_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.h:99:8: warning: ‘nam::lstm::LSTMConfig::out_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp: In function ‘nam::lstm::LSTMConfig nam::lstm::parse_config_json(const nlohmann::json_abi_v3_12_0::json&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/lstm.cpp:169:14: note: synthesized method ‘constexpr nam::lstm::LSTMConfig::LSTMConfig()’ first required here
+  169 |   LSTMConfig c;
+      |              ^
+[ 60%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/ring_buffer.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.cpp:1:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h: In constructor ‘nam::RingBuffer::RingBuffer()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/ring_buffer.h:15:3: warning: ‘nam::RingBuffer::_storage’ should be initialized in the member initialization list [-Weffc++]
+   15 |   RingBuffer() {};
+      |   ^~~~~~~~~~
+[ 66%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/util.cpp.o
+[ 73%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/wavenet/a2_fast.cpp.o
+[ 80%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/wavenet/model.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.h:20,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:11:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:28:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp: In instantiation of ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<Channels>::A2FastModel(std::vector<float>, double) [with int Channels = 3]’:
+/usr/include/c++/13/bits/unique_ptr.h:1070:30:   required from ‘std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>; _Args = {vector<float, allocator<float> >, double&}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<nam::wavenet::a2_fast::{anonymous}::A2FastModel<3> >]’
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:698:46:   required from here
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_layers’ should be initialized in the member initialization list [-Weffc++]
+  162 | A2FastModel<Channels>::A2FastModel(std::vector<float> weights, double expected_sample_rate)
+      | ^~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:75:10: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::Layer::conv_w’ should be initialized in the member initialization list [-Weffc++]
+   75 |   struct Layer
+      |          ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:75:10: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::Layer::history’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.h:17:
+/usr/include/c++/13/array:94:12: note: synthesized method ‘constexpr nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::Layer::Layer()’ first required here
+   94 |     struct array
+      |            ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:163:66: note: synthesized method ‘constexpr std::array<nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::Layer, 23>::array()’ first required here
+  163 | : DSP(/*in_channels=*/1, /*out_channels=*/1, expected_sample_rate)
+      |                                                                  ^
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_head_history’ should be initialized in the member initialization list [-Weffc++]
+  162 | A2FastModel<Channels>::A2FastModel(std::vector<float> weights, double expected_sample_rate)
+      | ^~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_layer_in’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_head_sum’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_z’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_cond’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<3>::_head_out’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp: In instantiation of ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<Channels>::A2FastModel(std::vector<float>, double) [with int Channels = 8]’:
+/usr/include/c++/13/bits/unique_ptr.h:1070:30:   required from ‘std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>; _Args = {vector<float, allocator<float> >, double&}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<nam::wavenet::a2_fast::{anonymous}::A2FastModel<8> >]’
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:700:46:   required from here
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_layers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:75:10: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::Layer::conv_w’ should be initialized in the member initialization list [-Weffc++]
+   75 |   struct Layer
+      |          ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:75:10: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::Layer::history’ should be initialized in the member initialization list [-Weffc++]
+/usr/include/c++/13/array:94:12: note: synthesized method ‘constexpr nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::Layer::Layer()’ first required here
+   94 |     struct array
+      |            ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:163:66: note: synthesized method ‘constexpr std::array<nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::Layer, 23>::array()’ first required here
+  163 | : DSP(/*in_channels=*/1, /*out_channels=*/1, expected_sample_rate)
+      |                                                                  ^
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_head_history’ should be initialized in the member initialization list [-Weffc++]
+  162 | A2FastModel<Channels>::A2FastModel(std::vector<float> weights, double expected_sample_rate)
+      | ^~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_layer_in’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_head_sum’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_z’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_cond’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/a2_fast.cpp:162:1: warning: ‘nam::wavenet::a2_fast::{anonymous}::A2FastModel<8>::_head_out’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../get_dsp.h:7,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:10:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:5,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:15,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:16,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:12:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../ring_buffer.h: In constructor ‘nam::RingBuffer::RingBuffer()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../ring_buffer.h:15:3: warning: ‘nam::RingBuffer::_storage’ should be initialized in the member initialization list [-Weffc++]
+   15 |   RingBuffer() {};
+      |   ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h: In constructor ‘nam::Conv1D::Conv1D()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   20 |   Conv1D()
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h: In constructor ‘nam::Conv1D::Conv1D(int, int, int, int, int, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   33 |   Conv1D(const int in_channels, const int out_channels, const int kernel_size, const int bias, const int dilation,
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:13:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h: In constructor ‘nam::gating_activations::GatingActivation::GatingActivation(nam::activations::Activation::Ptr, nam::activations::Activation::Ptr, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:35:3: warning: ‘nam::gating_activations::GatingActivation::input_buffer’ should be initialized in the member initialization list [-Weffc++]
+   35 |   GatingActivation(activations::Activation::Ptr input_act, activations::Activation::Ptr gating_act,
+      |   ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:35:3: warning: ‘nam::gating_activations::GatingActivation::gating_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h: In constructor ‘nam::gating_activations::BlendingActivation::BlendingActivation(nam::activations::Activation::Ptr, nam::activations::Activation::Ptr, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::pre_activation_buffer’ should be initialized in the member initialization list [-Weffc++]
+  142 |   BlendingActivation(activations::Activation::Ptr input_act, activations::Activation::Ptr blend_act,
+      |   ^~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::blend_buffer’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../film.h: In constructor ‘nam::FiLM::FiLM(int, int, bool, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../film.h:27:3: warning: ‘nam::FiLM::_output’ should be initialized in the member initialization list [-Weffc++]
+   27 |   FiLM(const int condition_dim, const int input_dim, const bool shift, const int groups = 1)
+      |   ^~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h: In constructor ‘nam::wavenet::detail::Layer::Layer(const nam::wavenet::LayerParams&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_layer1x1’ should be initialized in the member initialization list [-Weffc++]
+   44 |   Layer(const LayerParams& params)
+      |   ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_head1x1’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_z’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_output_next_layer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_output_head’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_gating_activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_blending_activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_conv_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_conv_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_input_mixin_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_input_mixin_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_activation_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_activation_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_layer1x1_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_head1x1_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp: In constructor ‘nam::wavenet::detail::Head::Head(const nam::wavenet::HeadParams&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:21:1: warning: ‘nam::wavenet::detail::Head::_convs’ should be initialized in the member initialization list [-Weffc++]
+   21 | nam::wavenet::detail::Head::Head(const HeadParams& params)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:21:1: warning: ‘nam::wavenet::detail::Head::_activations’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp: In constructor ‘nam::wavenet::detail::LayerArray::LayerArray(const nam::wavenet::LayerArrayParams&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:380:1: warning: ‘nam::wavenet::detail::LayerArray::_layers’ should be initialized in the member initialization list [-Weffc++]
+  380 | nam::wavenet::detail::LayerArray::LayerArray(const LayerArrayParams& params)
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:380:1: warning: ‘nam::wavenet::detail::LayerArray::_layer_outputs’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:380:1: warning: ‘nam::wavenet::detail::LayerArray::_head_inputs’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp: In constructor ‘nam::wavenet::WaveNet::WaveNet(int, const std::vector<nam::wavenet::LayerArrayParams>&, float, bool, std::optional<nam::wavenet::HeadParams>, std::vector<float>, std::unique_ptr<nam::DSP>, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_input’ should be initialized in the member initialization list [-Weffc++]
+  553 | nam::wavenet::WaveNet::WaveNet(const int in_channels,
+      | ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_dsp_input_buffers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_dsp_output_buffers’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_dsp_input_ptrs’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_condition_dsp_output_ptrs’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_layer_arrays’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_post_stack_head’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:553:1: warning: ‘nam::wavenet::WaveNet::_scaled_head_scratch’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h: In constructor ‘constexpr nam::wavenet::WaveNetConfig::WaveNetConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::in_channels’ should be initialized in the member initialization list [-Weffc++]
+  128 |   WaveNetConfig() = default;
+      |   ^~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::layer_array_params’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::head_scale’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::with_head’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::head_params’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:128:3: warning: ‘nam::wavenet::WaveNetConfig::condition_dsp’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::type’ should be initialized in the member initialization list [-Weffc++]
+   43 | struct ActivationConfig
+      |        ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_val’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::min_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:43:8: warning: ‘nam::activations::ActivationConfig::max_slope’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp: In function ‘nam::wavenet::WaveNetConfig nam::wavenet::parse_config_json(const nlohmann::json_abi_v3_12_0::json&, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:1054:39: note: synthesized method ‘constexpr nam::activations::ActivationConfig::ActivationConfig()’ first required here
+ 1054 |         activations::ActivationConfig secondary_activation_config;
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:3:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h: In constructor ‘constexpr nam::wavenet::HeadParams::HeadParams()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h:306:8: warning: ‘nam::wavenet::HeadParams::in_channels’ should be initialized in the member initialization list [-Weffc++]
+  306 | struct HeadParams
+      |        ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h:306:8: warning: ‘nam::wavenet::HeadParams::channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h:306:8: warning: ‘nam::wavenet::HeadParams::out_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h:306:8: warning: ‘nam::wavenet::HeadParams::kernel_sizes’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/params.h:306:8: warning: ‘nam::wavenet::HeadParams::activation_config’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp: In function ‘nam::wavenet::WaveNetConfig nam::wavenet::parse_config_json(const nlohmann::json_abi_v3_12_0::json&, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.cpp:1157:16: note: synthesized method ‘constexpr nam::wavenet::HeadParams::HeadParams()’ first required here
+ 1157 |     HeadParams hp;
+      |                ^~
+[ 86%] Building CXX object tools/CMakeFiles/render.dir/__/NAM/wavenet/slimmable.cpp.o
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../dsp.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:1:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(float)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:275:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  275 |   ActivationPReLU(float ns)
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::ActivationPReLU::ActivationPReLU(std::vector<float>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:280:3: warning: ‘nam::activations::ActivationPReLU::negative_slopes’ should be initialized in the member initialization list [-Weffc++]
+  280 |   ActivationPReLU(std::vector<float> ns) { negative_slopes = ns; }
+      |   ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h: In constructor ‘nam::activations::FastLUTActivation::FastLUTActivation(float, float, std::size_t, std::function<float(float)>)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::step_’ should be initialized in the member initialization list [-Weffc++]
+  377 |   FastLUTActivation(float min_x, float max_x, std::size_t size, std::function<float(float)> f)
+      |   ^~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::inv_step_’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../activations.h:377:3: warning: ‘nam::activations::FastLUTActivation::table_’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../dsp.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In constructor ‘nam::ConfigParserRegistry::ConfigParserRegistry()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:54:7: warning: ‘nam::ConfigParserRegistry::parsers_’ should be initialized in the member initialization list [-Weffc++]
+   54 | class ConfigParserRegistry
+      |       ^~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h: In static member function ‘static nam::ConfigParserRegistry& nam::ConfigParserRegistry::instance()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../model_config.h:59:33: note: synthesized method ‘nam::ConfigParserRegistry::ConfigParserRegistry()’ first required here
+   59 |     static ConfigParserRegistry inst;
+      |                                 ^~~~
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:5,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:12,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/model.h:15,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:16:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../ring_buffer.h: In constructor ‘nam::RingBuffer::RingBuffer()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../ring_buffer.h:15:3: warning: ‘nam::RingBuffer::_storage’ should be initialized in the member initialization list [-Weffc++]
+   15 |   RingBuffer() {};
+      |   ^~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h: In constructor ‘nam::Conv1D::Conv1D()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   20 |   Conv1D()
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:20:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h: In constructor ‘nam::Conv1D::Conv1D(int, int, int, int, int, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_weight’ should be initialized in the member initialization list [-Weffc++]
+   33 |   Conv1D(const int in_channels, const int out_channels, const int kernel_size, const int bias, const int dilation,
+      |   ^~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_depthwise_weight’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_bias’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_dilation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_num_groups’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../conv1d.h:33:3: warning: ‘nam::Conv1D::_output’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:13:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h: In constructor ‘nam::gating_activations::GatingActivation::GatingActivation(nam::activations::Activation::Ptr, nam::activations::Activation::Ptr, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:35:3: warning: ‘nam::gating_activations::GatingActivation::input_buffer’ should be initialized in the member initialization list [-Weffc++]
+   35 |   GatingActivation(activations::Activation::Ptr input_act, activations::Activation::Ptr gating_act,
+      |   ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:35:3: warning: ‘nam::gating_activations::GatingActivation::gating_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h: In constructor ‘nam::gating_activations::BlendingActivation::BlendingActivation(nam::activations::Activation::Ptr, nam::activations::Activation::Ptr, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::pre_activation_buffer’ should be initialized in the member initialization list [-Weffc++]
+  142 |   BlendingActivation(activations::Activation::Ptr input_act, activations::Activation::Ptr blend_act,
+      |   ^~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::input_buffer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../gating_activations.h:142:3: warning: ‘nam::gating_activations::BlendingActivation::blend_buffer’ should be initialized in the member initialization list [-Weffc++]
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:14:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../film.h: In constructor ‘nam::FiLM::FiLM(int, int, bool, int)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/../film.h:27:3: warning: ‘nam::FiLM::_output’ should be initialized in the member initialization list [-Weffc++]
+   27 |   FiLM(const int condition_dim, const int input_dim, const bool shift, const int groups = 1)
+      |   ^~~~
+[ 93%] Building CXX object tools/CMakeFiles/render.dir/__/Dependencies/AudioDSPTools/dsp/wav.cpp.o
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h: In constructor ‘nam::wavenet::detail::Layer::Layer(const nam::wavenet::LayerParams&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_layer1x1’ should be initialized in the member initialization list [-Weffc++]
+   44 |   Layer(const LayerParams& params)
+      |   ^~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_head1x1’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_z’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_output_next_layer’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_output_head’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_gating_activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_blending_activation’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_conv_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_conv_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_input_mixin_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_input_mixin_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_activation_pre_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_activation_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_layer1x1_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/detail.h:44:3: warning: ‘nam::wavenet::detail::Layer::_head1x1_post_film’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp: In constructor ‘nam::slimmable_wavenet::SlimmableWavenet::SlimmableWavenet(std::vector<nam::wavenet::LayerArrayParams>, std::vector<std::vector<int> >, int, float, bool, nlohmann::json_abi_v3_12_0::json, std::vector<float>, double)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:340:1: warning: ‘nam::slimmable_wavenet::SlimmableWavenet::_active_model’ should be initialized in the member initialization list [-Weffc++]
+  340 | SlimmableWavenet::SlimmableWavenet(std::vector<wavenet::LayerArrayParams> original_params,
+      | ^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:340:1: warning: ‘nam::slimmable_wavenet::SlimmableWavenet::_pending_staged’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:340:1: warning: ‘nam::slimmable_wavenet::SlimmableWavenet::_current_channels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::WaveFileData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: warning: ‘WaveFileData::riffChunk’ should be initialized in the member initialization list [-Weffc++]
+   20 | struct WaveFileData
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::RiffChunk::RiffChunk()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:23:10: warning: ‘WaveFileData::RiffChunk::size’ should be initialized in the member initialization list [-Weffc++]
+   23 |   struct RiffChunk
+      |          ^~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::WaveFileData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: note: synthesized method ‘constexpr WaveFileData::RiffChunk::RiffChunk()’ first required here
+   20 | struct WaveFileData
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: warning: ‘WaveFileData::fmtChunk’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::FmtChunk::FmtChunk()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::size’ should be initialized in the member initialization list [-Weffc++]
+   30 |   struct FmtChunk
+      |          ^~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::audioFormat’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::numChannels’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::sampleRate’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::byteRate’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::blockAlign’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::bitsPerSample’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:30:10: warning: ‘WaveFileData::FmtChunk::extensible’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::WaveFileData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: note: synthesized method ‘constexpr WaveFileData::FmtChunk::FmtChunk()’ first required here
+   20 | struct WaveFileData
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: warning: ‘WaveFileData::factChunk’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::FactChunk::FactChunk()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:53:10: warning: ‘WaveFileData::FactChunk::size’ should be initialized in the member initialization list [-Weffc++]
+   53 |   struct FactChunk
+      |          ^~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:53:10: warning: ‘WaveFileData::FactChunk::numSamples’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::WaveFileData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: note: synthesized method ‘constexpr WaveFileData::FactChunk::FactChunk()’ first required here
+   20 | struct WaveFileData
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: warning: ‘WaveFileData::dataChunk’ should be initialized in the member initialization list [-Weffc++]
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::DataChunk::DataChunk()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:60:10: warning: ‘WaveFileData::DataChunk::size’ should be initialized in the member initialization list [-Weffc++]
+   60 |   struct DataChunk
+      |          ^~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In constructor ‘constexpr WaveFileData::WaveFileData()’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:20:8: note: synthesized method ‘constexpr WaveFileData::DataChunk::DataChunk()’ first required here
+   20 | struct WaveFileData
+      |        ^~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In function ‘dsp::wav::LoadReturnCode dsp::wav::Load(const char*, std::vector<float>&, double&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:356:16: note: synthesized method ‘constexpr WaveFileData::WaveFileData()’ first required here
+  356 |   WaveFileData wfd;
+      |                ^~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In function ‘void dsp::wav::_LoadSamples16(std::ifstream&, int, std::vector<float>&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:416:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  416 |   for (auto i = 0; i < samples.size(); i++)
+      |                    ~~^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In function ‘void dsp::wav::_LoadSamples24(std::ifstream&, int, std::vector<float>&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:433:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  433 |   for (auto i = 0; i < samples.size(); i++)
+      |                    ~~^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp: In function ‘void dsp::wav::_LoadSamples32FixedPoint(std::ifstream&, int, std::vector<float>&)’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/AudioDSPTools/dsp/wav.cpp:478:22: warning: comparison of integer expressions of different signedness: ‘int’ and ‘std::vector<float>::size_type’ {aka ‘long unsigned int’} [-Wsign-compare]
+  478 |   for (auto i = 0; i < samples.size(); i++)
+      |                    ~~^~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h: In instantiation of ‘std::__detail::__unique_ptr_t<_Tp> std::make_unique(_Args&& ...) [with _Tp = nam::slimmable_wavenet::SlimmableWavenetConfig; _Args = {}; __detail::__unique_ptr_t<_Tp> = __detail::__unique_ptr_t<nam::slimmable_wavenet::SlimmableWavenetConfig>]’:
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:553:53:   required from here
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:96:8: warning: ‘nam::slimmable_wavenet::SlimmableWavenetConfig::raw_config’ should be initialized in the member initialization list [-Weffc++]
+   96 | struct SlimmableWavenetConfig : public ModelConfig
+      |        ^~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:96:8: warning: ‘nam::slimmable_wavenet::SlimmableWavenetConfig::sample_rate’ should be initialized in the member initialization list [-Weffc++]
+In file included from /usr/include/c++/13/memory:78,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:3:
+/usr/include/c++/13/bits/unique_ptr.h:1070:30: note: synthesized method ‘nam::slimmable_wavenet::SlimmableWavenetConfig::SlimmableWavenetConfig()’ first required here
+ 1070 |     { return unique_ptr<_Tp>(new _Tp(std::forward<_Args>(__args)...)); }
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h: In instantiation of ‘constexpr void std::_Construct(_Tp*, _Args&& ...) [with _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; _Args = {}]’:
+/usr/include/c++/13/bits/alloc_traits.h:661:19:   required from ‘static constexpr void std::allocator_traits<std::allocator<void> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; _Args = {}; allocator_type = std::allocator<void>]’
+/usr/include/c++/13/bits/shared_ptr_base.h:604:39:   required from ‘std::_Sp_counted_ptr_inplace<_Tp, _Alloc, _Lp>::_Sp_counted_ptr_inplace(_Alloc, _Args&& ...) [with _Args = {}; _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; _Alloc = std::allocator<void>; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
+/usr/include/c++/13/bits/shared_ptr_base.h:971:16:   required from ‘std::__shared_count<_Lp>::__shared_count(_Tp*&, std::_Sp_alloc_shared_tag<_Alloc>, _Args&& ...) [with _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; _Alloc = std::allocator<void>; _Args = {}; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
+/usr/include/c++/13/bits/shared_ptr_base.h:1712:14:   required from ‘std::__shared_ptr<_Tp, _Lp>::__shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {}; _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; __gnu_cxx::_Lock_policy _Lp = __gnu_cxx::_S_atomic]’
+/usr/include/c++/13/bits/shared_ptr.h:464:59:   required from ‘std::shared_ptr<_Tp>::shared_ptr(std::_Sp_alloc_shared_tag<_Tp>, _Args&& ...) [with _Alloc = std::allocator<void>; _Args = {}; _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel]’
+/usr/include/c++/13/bits/shared_ptr.h:1009:14:   required from ‘std::shared_ptr<std::_NonArray<_Tp> > std::make_shared(_Args&& ...) [with _Tp = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel; _Args = {}; _NonArray<_Tp> = nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel]’
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.cpp:445:48:   required from here
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:68:10: warning: ‘nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel::model’ should be initialized in the member initialization list [-Weffc++]
+   68 |   struct StagedSlimModel
+      |          ^~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/NAM/wavenet/slimmable.h:68:10: warning: ‘nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel::channels’ should be initialized in the member initialization list [-Weffc++]
+In file included from /usr/include/c++/13/bits/stl_tempbuf.h:61,
+                 from /usr/include/c++/13/memory:66:
+/usr/include/c++/13/bits/stl_construct.h:119:7: note: synthesized method ‘constexpr nam::slimmable_wavenet::SlimmableWavenet::StagedSlimModel::StagedSlimModel()’ first required here
+  119 |       ::new((void*)__p) _Tp(std::forward<_Args>(__args)...);
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[100%] Linking CXX executable render
+[100%] Built target render
+Running: c++ -std=c++20 -O2 -Wall -Wextra -Werror /workspace/scratch/f24b25d0b991/BeavisButthead/tests/pedal_dsp.cpp -o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/pedal-test
+Running: /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/pedal-test
+PASS: exact reset bypass, drive signal change, echo timing/feedback, reset silence, block independence, no Process allocations at 44.1/48/96/192 kHz.
+Running: c++ -std=c++20 -O2 -I/workspace/scratch/f24b25d0b991/BeavisButthead/iPlug2/IPlug -I/workspace/scratch/f24b25d0b991/BeavisButthead/iPlug2/WDL /workspace/scratch/f24b25d0b991/BeavisButthead/tests/state_reader.cpp -o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/state-test
+In file included from /workspace/scratch/f24b25d0b991/BeavisButthead/tests/../BBIREvan/IREvanStateReader.h:5,
+                 from /workspace/scratch/f24b25d0b991/BeavisButthead/tests/state_reader.cpp:1:
+/workspace/scratch/f24b25d0b991/BeavisButthead/iPlug2/IPlug/IPlugStructs.h:122:17: warning: multi-character character constant [-Wmultichar]
+  122 |     int magic = IPLUG_VERSION_MAGIC;
+      |                 ^~~~~~~~~~~~~~~~~~~
+/workspace/scratch/f24b25d0b991/BeavisButthead/iPlug2/IPlug/IPlugStructs.h:137:41: warning: multi-character character constant [-Wmultichar]
+  137 |     if (magicpos > position && magic == IPLUG_VERSION_MAGIC)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+Running: /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/state-test
+PASS: 13/18-param byte-chunk round trips, every truncated prefix, invalid offsets, NaN/Inf and malformed string-length rejection, atomic config update.
+Running: c++ -std=c++20 -O2 -DNAM_ENABLE_A2_FAST -I/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore -I/workspace/scratch/f24b25d0b991/BeavisButthead/eigen -I/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/eigen -I/workspace/scratch/f24b25d0b991/BeavisButthead/NeuralAmpModelerCore/Dependencies/nlohmann /workspace/scratch/f24b25d0b991/BeavisButthead/tests/chain_smoke.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/BBIREvan/ToneStack.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/AudioDSPTools/dsp/ImpulseResponse.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/AudioDSPTools/dsp/NoiseGate.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/AudioDSPTools/dsp/RecursiveLinearFilter.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/AudioDSPTools/dsp/dsp.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/AudioDSPTools/dsp/wav.cpp /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/ring_buffer.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/conv1d.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/activations.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/lstm.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/dsp.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/util.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/convnet.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/get_dsp.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/container.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/wavenet/a2_fast.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/wavenet/model.cpp.o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/core/tools/CMakeFiles/render.dir/__/NAM/wavenet/slimmable.cpp.o -o /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/chain-smoke
+Running: /workspace/scratch/f24b25d0b991/BeavisButthead/smoke-build/chain-smoke /workspace/scratch/f24b25d0b991/BeavisButthead/models /workspace/scratch/f24b25d0b991/BeavisButthead/models/cabinets
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.110493 | cpu/offline=0.107458
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.110493 | cpu/offline=0.105865
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.120355 | cpu/offline=0.100513
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.120355 | cpu/offline=0.122201
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.110809 | cpu/offline=0.0958717
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.110809 | cpu/offline=0.0932634
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.11719 | cpu/offline=0.0918053
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.111925 | cpu/offline=0.0904966
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.111216 | cpu/offline=0.129873
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.111216 | cpu/offline=0.120324
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.119876 | cpu/offline=0.114761
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.108736 | cpu/offline=0.114474
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.11107 | cpu/offline=0.230287
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.11107 | cpu/offline=0.207005
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.11107 | cpu/offline=0.195658
+Phillipe P VOXAC15-TopBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.117105 | cpu/offline=0.194611
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.0900568 | cpu/offline=0.101235
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.0900568 | cpu/offline=0.0963395
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.0993714 | cpu/offline=0.0916366
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.0993714 | cpu/offline=0.0935154
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.0899943 | cpu/offline=0.103939
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.0899943 | cpu/offline=0.0928146
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.0944047 | cpu/offline=0.092787
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.093128 | cpu/offline=0.0917142
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.0902201 | cpu/offline=0.133812
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.0902201 | cpu/offline=0.125512
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.0966826 | cpu/offline=0.116745
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.0889648 | cpu/offline=0.121835
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.0902104 | cpu/offline=0.237639
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.0902104 | cpu/offline=0.21211
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.0902104 | cpu/offline=0.198259
+Phillipe P VOXAC15-TopBoost.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.0943348 | cpu/offline=0.196248
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.143478 | cpu/offline=0.120775
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.143478 | cpu/offline=0.103275
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.152606 | cpu/offline=0.0942362
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.152606 | cpu/offline=0.0957342
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.139432 | cpu/offline=0.0971616
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.139432 | cpu/offline=0.0965332
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.14826 | cpu/offline=0.0922189
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.138634 | cpu/offline=0.0897641
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.139421 | cpu/offline=0.136528
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.139421 | cpu/offline=0.14628
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.149487 | cpu/offline=0.130724
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.142109 | cpu/offline=0.128351
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.139416 | cpu/offline=0.256869
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.139416 | cpu/offline=0.231077
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.139416 | cpu/offline=0.222184
+Phillipe P VOXAC15-TopBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.148368 | cpu/offline=0.210445
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.268809 | cpu/offline=0.110478
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.268809 | cpu/offline=0.103595
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.268809 | cpu/offline=0.0965204
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.268809 | cpu/offline=0.098855
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.268776 | cpu/offline=0.106492
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.268776 | cpu/offline=0.0955984
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.268943 | cpu/offline=0.0935225
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.26972 | cpu/offline=0.0936051
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.268458 | cpu/offline=0.134524
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.268458 | cpu/offline=0.12528
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.268763 | cpu/offline=0.117152
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.268723 | cpu/offline=0.123677
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.268461 | cpu/offline=0.230677
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.268461 | cpu/offline=0.217635
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.268461 | cpu/offline=0.19577
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.268743 | cpu/offline=0.196128
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.227369 | cpu/offline=0.100726
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.227369 | cpu/offline=0.0972711
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.227369 | cpu/offline=0.0936861
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.227369 | cpu/offline=0.0929835
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.227216 | cpu/offline=0.0990185
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.227216 | cpu/offline=0.0938564
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.227216 | cpu/offline=0.0898848
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.227216 | cpu/offline=0.091657
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.227332 | cpu/offline=0.151261
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.227332 | cpu/offline=0.1336
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.227332 | cpu/offline=0.127527
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.227332 | cpu/offline=0.120203
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.227392 | cpu/offline=0.231805
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.227392 | cpu/offline=0.214481
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.227392 | cpu/offline=0.197767
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.227392 | cpu/offline=0.204115
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.306453 | cpu/offline=0.103299
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.306453 | cpu/offline=0.0996918
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.306453 | cpu/offline=0.0945402
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.306453 | cpu/offline=0.0949693
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.306173 | cpu/offline=0.0994235
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.306173 | cpu/offline=0.0951358
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.306173 | cpu/offline=0.0928018
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.306173 | cpu/offline=0.0973587
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.306735 | cpu/offline=0.136426
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.306735 | cpu/offline=0.143008
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.306735 | cpu/offline=0.140066
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.306735 | cpu/offline=0.127273
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.306765 | cpu/offline=0.248338
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.306765 | cpu/offline=0.234095
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.306765 | cpu/offline=0.199533
+Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.306765 | cpu/offline=0.19555
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.648607 | cpu/offline=0.103829
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.648607 | cpu/offline=0.0977602
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.64553 | cpu/offline=0.0946921
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.64553 | cpu/offline=0.0992352
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.667008 | cpu/offline=0.103336
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.667008 | cpu/offline=0.0959049
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.642707 | cpu/offline=0.0924171
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.639804 | cpu/offline=0.0921573
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.666713 | cpu/offline=0.135053
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.666713 | cpu/offline=0.122596
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.647402 | cpu/offline=0.11845
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.668983 | cpu/offline=0.117133
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.667185 | cpu/offline=0.229657
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.667185 | cpu/offline=0.211833
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.667185 | cpu/offline=0.200124
+Roman A LT_MESA_MARKIV_1.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.643732 | cpu/offline=0.198746
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.591482 | cpu/offline=0.100085
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.591482 | cpu/offline=0.0988777
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.560498 | cpu/offline=0.0925814
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.560498 | cpu/offline=0.0927535
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.588292 | cpu/offline=0.0981563
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.588292 | cpu/offline=0.0938726
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.563255 | cpu/offline=0.0926209
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.549631 | cpu/offline=0.0926982
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.586638 | cpu/offline=0.132076
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.586638 | cpu/offline=0.121337
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.558669 | cpu/offline=0.115908
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.587436 | cpu/offline=0.113981
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.589048 | cpu/offline=0.239085
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.589048 | cpu/offline=0.220274
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.589048 | cpu/offline=0.241871
+Roman A LT_MESA_MARKIV_1.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.564806 | cpu/offline=0.216964
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.774898 | cpu/offline=0.10354
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.774898 | cpu/offline=0.0976369
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.773621 | cpu/offline=0.0907561
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.773621 | cpu/offline=0.0958602
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.776148 | cpu/offline=0.0960591
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.776148 | cpu/offline=0.0958893
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.778253 | cpu/offline=0.0912684
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.746519 | cpu/offline=0.0906514
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.777084 | cpu/offline=0.136201
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.777084 | cpu/offline=0.12682
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.777874 | cpu/offline=0.119964
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.766612 | cpu/offline=0.118562
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.776707 | cpu/offline=0.231466
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.776706 | cpu/offline=0.213826
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.776706 | cpu/offline=0.198584
+Roman A LT_MESA_MARKIV_1.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.778732 | cpu/offline=0.19397
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.137176 | cpu/offline=0.105863
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.137176 | cpu/offline=0.0977952
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.137176 | cpu/offline=0.0913386
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.137176 | cpu/offline=0.0916957
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.137129 | cpu/offline=0.0967699
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.137129 | cpu/offline=0.0929273
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.137129 | cpu/offline=0.0903968
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.137129 | cpu/offline=0.089084
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.137155 | cpu/offline=0.133239
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.137155 | cpu/offline=0.127448
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.137155 | cpu/offline=0.115731
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.137155 | cpu/offline=0.117428
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.137394 | cpu/offline=0.233306
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.137394 | cpu/offline=0.213194
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.137394 | cpu/offline=0.197608
+Helga B 5150 BlockLetter - NoBoost.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.137394 | cpu/offline=0.203234
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.111639 | cpu/offline=0.110383
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.111639 | cpu/offline=0.106228
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.111639 | cpu/offline=0.101573
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.111639 | cpu/offline=0.0995072
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.111539 | cpu/offline=0.101679
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.111539 | cpu/offline=0.100289
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.111539 | cpu/offline=0.0935478
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.111539 | cpu/offline=0.0940088
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.11179 | cpu/offline=0.133694
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.11179 | cpu/offline=0.126827
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.11179 | cpu/offline=0.120113
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.11179 | cpu/offline=0.119794
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.112211 | cpu/offline=0.237392
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.112211 | cpu/offline=0.226593
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.112211 | cpu/offline=0.199772
+Helga B 5150 BlockLetter - NoBoost.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.112211 | cpu/offline=0.222081
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.183681 | cpu/offline=0.100114
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.183681 | cpu/offline=0.0951796
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.183639 | cpu/offline=0.0919248
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.183639 | cpu/offline=0.092424
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.18364 | cpu/offline=0.0970061
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.18364 | cpu/offline=0.0918398
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.183611 | cpu/offline=0.0919923
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.183422 | cpu/offline=0.0927362
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.183529 | cpu/offline=0.134223
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.183529 | cpu/offline=0.122526
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.183521 | cpu/offline=0.117542
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.183415 | cpu/offline=0.116778
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.183768 | cpu/offline=0.236208
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.183768 | cpu/offline=0.215505
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.183768 | cpu/offline=0.285258
+Helga B 5150 BlockLetter - NoBoost.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.183744 | cpu/offline=0.253257
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.168334 | cpu/offline=0.12746
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.168334 | cpu/offline=0.110437
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.168501 | cpu/offline=0.107486
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.168501 | cpu/offline=0.124451
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.16758 | cpu/offline=0.127659
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.16758 | cpu/offline=0.119681
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.166675 | cpu/offline=0.104562
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.165398 | cpu/offline=0.107345
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.168287 | cpu/offline=0.159424
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.168287 | cpu/offline=0.120459
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.16867 | cpu/offline=0.114712
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.16578 | cpu/offline=0.120821
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.168305 | cpu/offline=0.234477
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.168305 | cpu/offline=0.226847
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.168305 | cpu/offline=0.20943
+Tim R Fender TwinVerb Norm Bright.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.16737 | cpu/offline=0.201513
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.13854 | cpu/offline=0.103753
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.13854 | cpu/offline=0.101826
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.138385 | cpu/offline=0.0927544
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.138385 | cpu/offline=0.0966642
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.138702 | cpu/offline=0.0997314
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.138702 | cpu/offline=0.1002
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.13789 | cpu/offline=0.0984399
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.135344 | cpu/offline=0.0924932
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.138739 | cpu/offline=0.143801
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.138739 | cpu/offline=0.135526
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.138665 | cpu/offline=0.126519
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.137232 | cpu/offline=0.11901
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.138755 | cpu/offline=0.243296
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.138755 | cpu/offline=0.219201
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.138755 | cpu/offline=0.211061
+Tim R Fender TwinVerb Norm Bright.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.137957 | cpu/offline=0.20356
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.153028 | cpu/offline=0.102077
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.153028 | cpu/offline=0.0996558
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.152622 | cpu/offline=0.0970684
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.152622 | cpu/offline=0.0959698
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.153334 | cpu/offline=0.103995
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.153334 | cpu/offline=0.0953446
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.152035 | cpu/offline=0.0931051
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.151698 | cpu/offline=0.0945219
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.154316 | cpu/offline=0.135451
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.154316 | cpu/offline=0.13692
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.154122 | cpu/offline=0.120321
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.153555 | cpu/offline=0.117531
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.154338 | cpu/offline=0.237565
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.154338 | cpu/offline=0.217407
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.154338 | cpu/offline=0.203836
+Tim R Fender TwinVerb Norm Bright.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.153057 | cpu/offline=0.200194
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 44100 Hz | 32 | peak=0.240279 | cpu/offline=0.0945954
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 44100 Hz | 64 | peak=0.240279 | cpu/offline=0.0888838
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 44100 Hz | 256 | peak=0.240279 | cpu/offline=0.0849078
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 44100 Hz | 1024 | peak=0.240279 | cpu/offline=0.0858189
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 48000 Hz | 32 | peak=0.240458 | cpu/offline=0.0956574
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 48000 Hz | 64 | peak=0.240458 | cpu/offline=0.0871897
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 48000 Hz | 256 | peak=0.240458 | cpu/offline=0.0822585
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 48000 Hz | 1024 | peak=0.240458 | cpu/offline=0.0823231
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 96000 Hz | 32 | peak=0.240129 | cpu/offline=0.131363
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 96000 Hz | 64 | peak=0.240129 | cpu/offline=0.119015
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 96000 Hz | 256 | peak=0.240129 | cpu/offline=0.11343
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 96000 Hz | 1024 | peak=0.240129 | cpu/offline=0.10918
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 192000 Hz | 32 | peak=0.239826 | cpu/offline=0.275279
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 192000 Hz | 64 | peak=0.239826 | cpu/offline=0.231886
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 192000 Hz | 256 | peak=0.239826 | cpu/offline=0.27349
+AMP-SLO1-3.nam | jester-dv77-sm57.wav | 192000 Hz | 1024 | peak=0.239826 | cpu/offline=0.223847
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 44100 Hz | 32 | peak=0.216613 | cpu/offline=0.126333
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 44100 Hz | 64 | peak=0.216613 | cpu/offline=0.104081
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 44100 Hz | 256 | peak=0.216613 | cpu/offline=0.086993
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 44100 Hz | 1024 | peak=0.216613 | cpu/offline=0.0961503
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 48000 Hz | 32 | peak=0.2169 | cpu/offline=0.133346
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 48000 Hz | 64 | peak=0.2169 | cpu/offline=0.0904976
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 48000 Hz | 256 | peak=0.2169 | cpu/offline=0.0821451
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 48000 Hz | 1024 | peak=0.2169 | cpu/offline=0.1478
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 96000 Hz | 32 | peak=0.217089 | cpu/offline=0.192325
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 96000 Hz | 64 | peak=0.217089 | cpu/offline=0.133267
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 96000 Hz | 256 | peak=0.217089 | cpu/offline=0.118474
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 96000 Hz | 1024 | peak=0.217089 | cpu/offline=0.111509
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 192000 Hz | 32 | peak=0.216994 | cpu/offline=0.276438
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 192000 Hz | 64 | peak=0.216994 | cpu/offline=0.227927
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 192000 Hz | 256 | peak=0.216994 | cpu/offline=0.196464
+AMP-SLO1-3.nam | jester-v30-sm57.wav | 192000 Hz | 1024 | peak=0.216994 | cpu/offline=0.193776
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 44100 Hz | 32 | peak=0.274752 | cpu/offline=0.106741
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 44100 Hz | 64 | peak=0.274752 | cpu/offline=0.118202
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 44100 Hz | 256 | peak=0.274752 | cpu/offline=0.0854074
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 44100 Hz | 1024 | peak=0.274752 | cpu/offline=0.088722
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 48000 Hz | 32 | peak=0.273796 | cpu/offline=0.0929874
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 48000 Hz | 64 | peak=0.273796 | cpu/offline=0.0856728
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 48000 Hz | 256 | peak=0.273796 | cpu/offline=0.0811654
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 48000 Hz | 1024 | peak=0.273803 | cpu/offline=0.0821459
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 96000 Hz | 32 | peak=0.274447 | cpu/offline=0.13657
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 96000 Hz | 64 | peak=0.274447 | cpu/offline=0.119815
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 96000 Hz | 256 | peak=0.274447 | cpu/offline=0.110151
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 96000 Hz | 1024 | peak=0.274448 | cpu/offline=0.108383
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 192000 Hz | 32 | peak=0.274333 | cpu/offline=0.236497
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 192000 Hz | 64 | peak=0.274333 | cpu/offline=0.212855
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 192000 Hz | 256 | peak=0.274333 | cpu/offline=0.193486
+AMP-SLO1-3.nam | jester-rockdriver-e606.wav | 192000 Hz | 1024 | peak=0.274333 | cpu/offline=0.192733
+PASS: 288 integrated chain cases (gate, drive, model/resampler, EQ, real cabinet IR, echo, DC blocker).

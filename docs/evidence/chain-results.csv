@@ -1,0 +1,289 @@
+model,cabinet,host_rate_hz,block_frames,peak_absolute,offline_cpu_ratio_not_a_realtime_guarantee
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,44100,32,0.110493,0.105218
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,44100,64,0.110493,0.099253
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,44100,256,0.120355,0.0929151
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,44100,1024,0.120355,0.0948337
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,48000,32,0.110809,0.100073
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,48000,64,0.110809,0.0939789
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,48000,256,0.11719,0.0933203
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,48000,1024,0.111925,0.0923266
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,96000,32,0.111216,0.136411
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,96000,64,0.111216,0.129544
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,96000,256,0.119876,0.117975
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,96000,1024,0.108736,0.117803
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,192000,32,0.11107,0.232817
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,192000,64,0.11107,0.212629
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,192000,256,0.11107,0.202966
+Phillipe P VOXAC15-TopBoost.nam,jester-dv77-sm57.wav,192000,1024,0.117105,0.195131
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,44100,32,0.0900568,0.101943
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,44100,64,0.0900568,0.109965
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,44100,256,0.0993714,0.0964599
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,44100,1024,0.0993714,0.105097
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,48000,32,0.0899943,0.100575
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,48000,64,0.0899943,0.0982931
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,48000,256,0.0944047,0.0923981
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,48000,1024,0.093128,0.0947574
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,96000,32,0.0902201,0.134135
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,96000,64,0.0902201,0.127378
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,96000,256,0.0966826,0.119582
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,96000,1024,0.0889648,0.122522
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,192000,32,0.0902104,0.234623
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,192000,64,0.0902104,0.217689
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,192000,256,0.0902104,0.198178
+Phillipe P VOXAC15-TopBoost.nam,jester-v30-sm57.wav,192000,1024,0.0943348,0.194661
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,44100,32,0.143478,0.100965
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,44100,64,0.143478,0.0959881
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,44100,256,0.152606,0.091811
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,44100,1024,0.152606,0.0907382
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,48000,32,0.139432,0.0971644
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,48000,64,0.139432,0.0933601
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,48000,256,0.14826,0.0882004
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,48000,1024,0.138634,0.0894745
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,96000,32,0.139421,0.144185
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,96000,64,0.139421,0.118359
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,96000,256,0.149487,0.115733
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,96000,1024,0.142109,0.113073
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,192000,32,0.139416,0.22525
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,192000,64,0.139416,0.20824
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,192000,256,0.139416,0.192647
+Phillipe P VOXAC15-TopBoost.nam,jester-rockdriver-e606.wav,192000,1024,0.148368,0.196788
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,44100,32,0.268809,0.0988654
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,44100,64,0.268809,0.0964849
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,44100,256,0.268809,0.0898279
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,44100,1024,0.268809,0.0904678
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,48000,32,0.268776,0.0956271
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,48000,64,0.268776,0.0914847
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,48000,256,0.268943,0.0895338
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,48000,1024,0.26972,0.0887929
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,96000,32,0.268458,0.13085
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,96000,64,0.268458,0.121216
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,96000,256,0.268763,0.113792
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,96000,1024,0.268723,0.11283
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,192000,32,0.268461,0.22682
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,192000,64,0.268461,0.22191
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,192000,256,0.268461,0.239091
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-dv77-sm57.wav,192000,1024,0.268743,0.208317
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,44100,32,0.227369,0.10258
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,44100,64,0.227369,0.0989984
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,44100,256,0.227369,0.0916549
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,44100,1024,0.227369,0.0904283
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,48000,32,0.227216,0.0955411
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,48000,64,0.227216,0.0941991
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,48000,256,0.227216,0.089987
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,48000,1024,0.227216,0.090236
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,96000,32,0.227332,0.131988
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,96000,64,0.227332,0.120746
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,96000,256,0.227332,0.115024
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,96000,1024,0.227332,0.115115
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,192000,32,0.227392,0.24506
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,192000,64,0.227392,0.212909
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,192000,256,0.227392,0.19683
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-v30-sm57.wav,192000,1024,0.227392,0.192226
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,44100,32,0.306453,0.100942
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,44100,64,0.306453,0.0953462
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,44100,256,0.306453,0.0915302
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,44100,1024,0.306453,0.0921729
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,48000,32,0.306173,0.0963746
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,48000,64,0.306173,0.0917718
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,48000,256,0.306173,0.0910693
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,48000,1024,0.306173,0.095472
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,96000,32,0.306735,0.13093
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,96000,64,0.306735,0.121111
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,96000,256,0.306735,0.116317
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,96000,1024,0.306735,0.115449
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,192000,32,0.306765,0.227921
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,192000,64,0.306765,0.209848
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,192000,256,0.306765,0.197359
+"Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",jester-rockdriver-e606.wav,192000,1024,0.306765,0.192791
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,44100,32,0.648607,0.0977688
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,44100,64,0.648607,0.0950024
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,44100,256,0.64553,0.0925543
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,44100,1024,0.64553,0.0912514
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,48000,32,0.667008,0.0951918
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,48000,64,0.667008,0.0923742
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,48000,256,0.642707,0.0895172
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,48000,1024,0.639804,0.0886901
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,96000,32,0.666713,0.132143
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,96000,64,0.666713,0.120616
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,96000,256,0.647402,0.11734
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,96000,1024,0.668983,0.114428
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,192000,32,0.667185,0.227156
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,192000,64,0.667185,0.208442
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,192000,256,0.667185,0.195862
+Roman A LT_MESA_MARKIV_1.nam,jester-dv77-sm57.wav,192000,1024,0.643732,0.192264
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,44100,32,0.591482,0.0971711
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,44100,64,0.591482,0.094921
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,44100,256,0.560498,0.0899309
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,44100,1024,0.560498,0.0913111
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,48000,32,0.588292,0.0939048
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,48000,64,0.588292,0.0899041
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,48000,256,0.563255,0.0879684
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,48000,1024,0.549631,0.0874294
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,96000,32,0.586638,0.128971
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,96000,64,0.586638,0.119498
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,96000,256,0.558669,0.114182
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,96000,1024,0.587436,0.113136
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,192000,32,0.589048,0.223498
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,192000,64,0.589048,0.206676
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,192000,256,0.589048,0.193384
+Roman A LT_MESA_MARKIV_1.nam,jester-v30-sm57.wav,192000,1024,0.564806,0.191665
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,44100,32,0.774898,0.0981932
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,44100,64,0.774898,0.0953833
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,44100,256,0.773621,0.0911469
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,44100,1024,0.773621,0.0900458
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,48000,32,0.776148,0.0947106
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,48000,64,0.776148,0.134062
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,48000,256,0.778253,0.0976784
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,48000,1024,0.746519,0.0945004
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,96000,32,0.777084,0.136823
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,96000,64,0.777084,0.128302
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,96000,256,0.777874,0.122779
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,96000,1024,0.766612,0.121624
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,192000,32,0.776707,0.255955
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,192000,64,0.776706,0.220131
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,192000,256,0.776706,0.205761
+Roman A LT_MESA_MARKIV_1.nam,jester-rockdriver-e606.wav,192000,1024,0.778732,0.202716
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,44100,32,0.137176,0.114453
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,44100,64,0.137176,0.104709
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,44100,256,0.137176,0.0913899
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,44100,1024,0.137176,0.0941715
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,48000,32,0.137129,0.0961673
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,48000,64,0.137129,0.0972181
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,48000,256,0.137129,0.0915563
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,48000,1024,0.137129,0.100844
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,96000,32,0.137155,0.133445
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,96000,64,0.137155,0.137541
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,96000,256,0.137155,0.159648
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,96000,1024,0.137155,0.168828
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,192000,32,0.137394,0.243917
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,192000,64,0.137394,0.223003
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,192000,256,0.137394,0.201374
+Helga B 5150 BlockLetter - NoBoost.nam,jester-dv77-sm57.wav,192000,1024,0.137394,0.206269
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,44100,32,0.111639,0.0977924
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,44100,64,0.111639,0.0953383
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,44100,256,0.111639,0.0895707
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,44100,1024,0.111639,0.0965819
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,48000,32,0.111539,0.103812
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,48000,64,0.111539,0.100843
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,48000,256,0.111539,0.0968755
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,48000,1024,0.111539,0.09358
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,96000,32,0.11179,0.132264
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,96000,64,0.11179,0.122499
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,96000,256,0.11179,0.11814
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,96000,1024,0.11179,0.120093
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,192000,32,0.112211,0.227057
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,192000,64,0.112211,0.210446
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,192000,256,0.112211,0.196233
+Helga B 5150 BlockLetter - NoBoost.nam,jester-v30-sm57.wav,192000,1024,0.112211,0.194434
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,44100,32,0.183681,0.0986233
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,44100,64,0.183681,0.095098
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,44100,256,0.183639,0.091199
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,44100,1024,0.183639,0.0909262
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,48000,32,0.18364,0.0956993
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,48000,64,0.18364,0.103274
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,48000,256,0.183611,0.102011
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,48000,1024,0.183422,0.0906755
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,96000,32,0.183529,0.133923
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,96000,64,0.183529,0.12386
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,96000,256,0.183521,0.12085
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,96000,1024,0.183415,0.11451
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,192000,32,0.183768,0.235001
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,192000,64,0.183768,0.220211
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,192000,256,0.183768,0.199513
+Helga B 5150 BlockLetter - NoBoost.nam,jester-rockdriver-e606.wav,192000,1024,0.183744,0.196234
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,44100,32,0.168334,0.100083
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,44100,64,0.168334,0.0966206
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,44100,256,0.168501,0.0922709
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,44100,1024,0.168501,0.0937413
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,48000,32,0.16758,0.0970077
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,48000,64,0.16758,0.0939882
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,48000,256,0.166675,0.0896801
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,48000,1024,0.165398,0.0948482
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,96000,32,0.168287,0.132019
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,96000,64,0.168287,0.119902
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,96000,256,0.16867,0.118278
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,96000,1024,0.16578,0.118387
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,192000,32,0.168305,0.234656
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,192000,64,0.168305,0.217034
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,192000,256,0.168305,0.204674
+Tim R Fender TwinVerb Norm Bright.nam,jester-dv77-sm57.wav,192000,1024,0.16737,0.202476
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,44100,32,0.13854,0.104545
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,44100,64,0.13854,0.100423
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,44100,256,0.138385,0.0934569
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,44100,1024,0.138385,0.10321
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,48000,32,0.138702,0.0962693
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,48000,64,0.138702,0.0959806
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,48000,256,0.13789,0.0920125
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,48000,1024,0.135344,0.0885323
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,96000,32,0.138739,0.131395
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,96000,64,0.138739,0.12201
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,96000,256,0.138665,0.11655
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,96000,1024,0.137232,0.117176
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,192000,32,0.138755,0.231385
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,192000,64,0.138755,0.210616
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,192000,256,0.138755,0.198279
+Tim R Fender TwinVerb Norm Bright.nam,jester-v30-sm57.wav,192000,1024,0.137957,0.194651
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,44100,32,0.153028,0.0995954
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,44100,64,0.153028,0.0963659
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,44100,256,0.152622,0.0931432
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,44100,1024,0.152622,0.0922544
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,48000,32,0.153334,0.0980271
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,48000,64,0.153334,0.0947165
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,48000,256,0.152035,0.0899274
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,48000,1024,0.151698,0.0901036
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,96000,32,0.154316,0.133965
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,96000,64,0.154316,0.122683
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,96000,256,0.154122,0.115877
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,96000,1024,0.153555,0.118537
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,192000,32,0.154338,0.234027
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,192000,64,0.154338,0.214573
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,192000,256,0.154338,0.197375
+Tim R Fender TwinVerb Norm Bright.nam,jester-rockdriver-e606.wav,192000,1024,0.153057,0.198386
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,44100,32,0.240279,0.109113
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,44100,64,0.240279,0.0922703
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,44100,256,0.240279,0.0858966
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,44100,1024,0.240279,0.0890045
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,48000,32,0.240458,0.0950312
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,48000,64,0.240458,0.100284
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,48000,256,0.240458,0.0826076
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,48000,1024,0.240458,0.0789535
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,96000,32,0.240129,0.13024
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,96000,64,0.240129,0.116501
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,96000,256,0.240129,0.107887
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,96000,1024,0.240129,0.106689
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,192000,32,0.239826,0.244295
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,192000,64,0.239826,0.2138
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,192000,256,0.239826,0.188849
+AMP-SLO1-3.nam,jester-dv77-sm57.wav,192000,1024,0.239826,0.18225
+AMP-SLO1-3.nam,jester-v30-sm57.wav,44100,32,0.216613,0.0997215
+AMP-SLO1-3.nam,jester-v30-sm57.wav,44100,64,0.216613,0.0893873
+AMP-SLO1-3.nam,jester-v30-sm57.wav,44100,256,0.216613,0.0823484
+AMP-SLO1-3.nam,jester-v30-sm57.wav,44100,1024,0.216613,0.0808668
+AMP-SLO1-3.nam,jester-v30-sm57.wav,48000,32,0.2169,0.0915849
+AMP-SLO1-3.nam,jester-v30-sm57.wav,48000,64,0.2169,0.0859632
+AMP-SLO1-3.nam,jester-v30-sm57.wav,48000,256,0.2169,0.0796546
+AMP-SLO1-3.nam,jester-v30-sm57.wav,48000,1024,0.2169,0.0811526
+AMP-SLO1-3.nam,jester-v30-sm57.wav,96000,32,0.217089,0.130195
+AMP-SLO1-3.nam,jester-v30-sm57.wav,96000,64,0.217089,0.12639
+AMP-SLO1-3.nam,jester-v30-sm57.wav,96000,256,0.217089,0.106608
+AMP-SLO1-3.nam,jester-v30-sm57.wav,96000,1024,0.217089,0.112806
+AMP-SLO1-3.nam,jester-v30-sm57.wav,192000,32,0.216994,0.240358
+AMP-SLO1-3.nam,jester-v30-sm57.wav,192000,64,0.216994,0.209755
+AMP-SLO1-3.nam,jester-v30-sm57.wav,192000,256,0.216994,0.189415
+AMP-SLO1-3.nam,jester-v30-sm57.wav,192000,1024,0.216994,0.186673
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,44100,32,0.274752,0.0964314
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,44100,64,0.274752,0.0875395
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,44100,256,0.274752,0.0866525
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,44100,1024,0.274752,0.0827192
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,48000,32,0.273796,0.0946156
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,48000,64,0.273796,0.0879849
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,48000,256,0.273796,0.0795815
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,48000,1024,0.273803,0.0805118
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,96000,32,0.274447,0.13217
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,96000,64,0.274447,0.12298
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,96000,256,0.274447,0.108037
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,96000,1024,0.274448,0.112054
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,192000,32,0.274333,0.329418
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,192000,64,0.274333,0.232683
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,192000,256,0.274333,0.208284
+AMP-SLO1-3.nam,jester-rockdriver-e606.wav,192000,1024,0.274333,0.19666

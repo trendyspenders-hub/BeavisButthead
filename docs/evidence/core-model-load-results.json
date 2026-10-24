@@ -1,0 +1,42 @@
+[
+  {
+    "file": "Helga B 5150 BlockLetter - NoBoost.nam",
+    "sha256": "eb5074a3288d214bc446d526c1e636271aec587b0c64009538be037b62e7ab9e",
+    "exit": 0,
+    "samples": 96000,
+    "all_finite": true,
+    "peak": 0.09974804520606995
+  },
+  {
+    "file": "Phillipe P JVM-CR-OR-NoDrive-ESR0,017.nam",
+    "sha256": "95574fe6345693d4c22dc9cf3df036f6a75a4df87e2f74f5c523ae454e460612",
+    "exit": 0,
+    "samples": 96000,
+    "all_finite": true,
+    "peak": 0.21253035962581635
+  },
+  {
+    "file": "Phillipe P VOXAC15-TopBoost.nam",
+    "sha256": "382d0bb88d1b6ee59aa9413ec5a419df857abe8c3b9f7d269221463d9daa6e14",
+    "exit": 0,
+    "samples": 96000,
+    "all_finite": true,
+    "peak": 0.14970390498638153
+  },
+  {
+    "file": "Roman A LT_MESA_MARKIV_1.nam",
+    "sha256": "f4c06c5f01f1af7a6243c4fc2a1480bbed9036295735b99e9d20842b7dd23431",
+    "exit": 0,
+    "samples": 96000,
+    "all_finite": true,
+    "peak": 0.5364088416099548
+  },
+  {
+    "file": "Tim R Fender TwinVerb Norm Bright.nam",
+    "sha256": "6146d1758ddab94c529dba77f1feda8b804051f0e19117086a58db6b73b2e46b",
+    "exit": 0,
+    "samples": 96000,
+    "all_finite": true,
+    "peak": 0.07032107561826706
+  }
+]

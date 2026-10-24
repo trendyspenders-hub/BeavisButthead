@@ -1,0 +1,126 @@
+{
+  "purpose": "Hardware reference facts only; not a circuit model and not proof that a capture uses this exact variant.",
+  "amps": [
+    {
+      "family": "Fender Twin Reverb",
+      "reference_variant": "65 Twin Reverb reissue",
+      "output_watts": 85,
+      "load_ohms": 4,
+      "power_tubes": "4 x 6L6GC",
+      "speakers": "2 x 12-inch Jensen C-12K",
+      "controls": [
+        "Normal/Vibrato channels",
+        "Bright",
+        "Volume",
+        "Treble",
+        "Middle",
+        "Bass",
+        "Reverb",
+        "Speed",
+        "Intensity"
+      ],
+      "sources": [
+        "https://www.fender.com/products/65-twin-reverb",
+        "https://www.fmicassets.com/Damroot/Original/10001/021730_gamp_manual_all_revE.pdf"
+      ],
+      "capture_exact_variant_verified": false
+    },
+    {
+      "family": "Vox AC15",
+      "reference_variant": "AC15C1 Custom",
+      "output_watts": 15,
+      "load_ohms": 16,
+      "power_tubes": "EL84",
+      "speakers": "1 x 12-inch Celestion G12M Greenback (C1; C1X uses Alnico Blue)",
+      "controls": [
+        "Normal",
+        "Top Boost",
+        "Bass",
+        "Treble",
+        "Tone Cut",
+        "Master",
+        "Spring Reverb",
+        "Tremolo"
+      ],
+      "sources": [
+        "https://voxamps.com/product/the-vox-ac15-custom/"
+      ],
+      "capture_exact_variant_verified": false
+    },
+    {
+      "family": "Marshall JVM",
+      "reference_variant": "JVM410H",
+      "output_watts": 100,
+      "power_tubes": "4 x EL34",
+      "preamp_and_phase_inverter": "5 x ECC83 total",
+      "channels": 4,
+      "controls": [
+        "per-channel 3-band EQ",
+        "two effects loops"
+      ],
+      "sources": [
+        "https://www.marshall.com/us/en/support/amps/support-for-jvm410-head"
+      ],
+      "capture_exact_variant_verified": false
+    },
+    {
+      "family": "Peavey 5150/6505",
+      "reference_variant": "6505 1992 Original (related reference, not verification of the vintage 5150 capture)",
+      "output_watts": 120,
+      "power_tubes": "4 x 6L6GC",
+      "preamp_count_note": "Manufacturer page body says five 12AX7; icon says six. Not resolved or used as a DSP parameter.",
+      "controls": [
+        "Rhythm/Lead",
+        "shared Low/Mid/High",
+        "Pre/Post Gain",
+        "Presence",
+        "Resonance",
+        "Bright/Crunch"
+      ],
+      "sources": [
+        "https://peavey.com/en-int/collections/amplifiers/products/6505-1992-original-guitar-amp-head",
+        "https://assets.peavey.com/literature/manuals/80302108.pdf",
+        "https://assets.peavey.com/literature/manuals/119251_38557.pdf"
+      ],
+      "capture_exact_variant_verified": false
+    },
+    {
+      "family": "Mesa/Boogie Mark IV",
+      "reference_variant": "Mark IV owner manual",
+      "simulclass_pentode_watts_approx": 85,
+      "simulclass_triode_watts_approx": 70,
+      "power_tubes_standard": "4 x 6L6; manual also documents alternate outer EL34 pair",
+      "controls": [
+        "Rhythm 1",
+        "Rhythm 2",
+        "Lead",
+        "five-band graphic EQ",
+        "Triode/Pentode",
+        "Class A/Simul-Class"
+      ],
+      "sources": [
+        "https://mesa-boogie.imgix.net/media/User%20Manuals/Mark%204.pdf"
+      ],
+      "capture_exact_variant_verified": false
+    },
+    {
+      "family": "Soldano SLO100",
+      "reference_variant": "Current SLO-100 Classic",
+      "output_watts": 100,
+      "channels": 2,
+      "power_tubes": "4 x 5881 / 6L6",
+      "preamp_tubes": "5 x 12AX7 / ECC83",
+      "controls": [
+        "Normal/Overdrive",
+        "independent Preamp/Master",
+        "3-band EQ",
+        "Presence",
+        "Depth"
+      ],
+      "sources": [
+        "https://www.soldano.com/products/classic/amplifiers/slo-100-classic/"
+      ],
+      "capture_exact_variant_verified": false
+    }
+  ]
+}

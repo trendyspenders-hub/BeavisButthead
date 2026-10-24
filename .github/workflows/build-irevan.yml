@@ -1,0 +1,29 @@
+name: Build I.R.Evan macOS test installer
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  mac:
+    runs-on: macos-14
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build universal AU and VST3, PKG and DMG
+        run: bash scripts/build-mac.command
+      - name: Retain build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac-build-logs
+          path: mac-build-*/*.log
+          if-no-files-found: ignore
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Beavis-And-Butthead-by-IR-Evan-macOS-unsigned
+          path: |
+            mac-build-*/*.dmg
+            mac-build-*/disk/*.pkg
+          if-no-files-found: error

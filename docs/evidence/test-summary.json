@@ -1,0 +1,29 @@
+{
+  "source_version": "0.2.0",
+  "integrated_audio_cases": 288,
+  "model_files": 6,
+  "cabinet_files": 3,
+  "rates_hz": [
+    44100,
+    48000,
+    96000,
+    192000
+  ],
+  "block_sizes": [
+    32,
+    64,
+    256,
+    1024
+  ],
+  "finite_output": true,
+  "maximum_absolute_peak_in_synthetic_test": 0.778732,
+  "hardware_fidelity_verified": false,
+  "native_AU_VST3_AAX_compile_verified": false,
+  "pro_tools_load_verified": false,
+  "aax_signed": false,
+  "pedal_no_process_allocation_test": "pass (new pedals only)",
+  "pedal_asan_ubsan": "pass, ASAN_OPTIONS=detect_leaks=0",
+  "leak_detection": "unavailable under this environment",
+  "state_reader": "pass: actual iPlug IByteChunk; 13/18 values; every truncated prefix; invalid offsets; malformed signed/huge string lengths; NaN/Inf; atomic config update",
+  "preview_DOM": "pass, jsdom; browser pixel test unavailable"
+}
