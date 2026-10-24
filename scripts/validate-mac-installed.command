@@ -7,7 +7,7 @@ TASK_LOG="$(mktemp -d "$TASK_ROOT/mac-validation-XXXXXX")"
 for TASK_FORMAT in Components/BBIREvan.component VST3/BBIREvan.vst3; do
   TASK_BUNDLE="/Library/Audio/Plug-Ins/$TASK_FORMAT"
   test -f "$TASK_BUNDLE/Contents/MacOS/BBIREvan"
-  lipo -verify_arch arm64 x86_64 "$TASK_BUNDLE/Contents/MacOS/BBIREvan"
+  lipo "$TASK_BUNDLE/Contents/MacOS/BBIREvan" -verify_arch arm64 x86_64
   codesign --verify --deep --strict --verbose=2 "$TASK_BUNDLE" 2>&1 | tee -a "$TASK_LOG/bundles.log"
   for TASK_FRAME in 0 1 2 3; do test -f "$TASK_BUNDLE/Contents/Resources/Reaction$TASK_FRAME.png"; done
 done

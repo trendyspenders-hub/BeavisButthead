@@ -18,7 +18,7 @@ ditto "$TASK_BUILD/payload" "$TASK_OUT/payload"
 mkdir "$TASK_OUT/disk"
 for TASK_FORMAT in Components/BBIREvan.component VST3/BBIREvan.vst3; do
   TASK_BUNDLE="$TASK_OUT/payload/Library/Audio/Plug-Ins/$TASK_FORMAT"
-  lipo -verify_arch arm64 x86_64 "$TASK_BUNDLE/Contents/MacOS/BBIREvan"
+  lipo "$TASK_BUNDLE/Contents/MacOS/BBIREvan" -verify_arch arm64 x86_64
   codesign --force --options runtime --timestamp --sign "$IREVAN_APP_IDENTITY" "$TASK_BUNDLE"
   codesign --verify --deep --strict --verbose=2 "$TASK_BUNDLE"
 done

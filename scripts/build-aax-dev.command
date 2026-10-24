@@ -16,13 +16,13 @@ fi
 TASK_OUT="$(mktemp -d "$TASK_ROOT/aax-dev-build-XXXXXX")"
 xcodebuild -project "$TASK_ROOT/BBIREvan/projects/BBIREvan-macOS.xcodeproj" \
   -xcconfig "$TASK_ROOT/BBIREvan/config/BBIREvan-mac.xcconfig" \
-  -target AAX -configuration Release ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO \
+  -target AAX -configuration Release ARCHS='arm64 x86_64' ONLY_ACTIVE_ARCH=NO DEPLOYMENT_LOCATION=NO \
   CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO DEVELOPMENT_TEAM= \
   CONFIGURATION_BUILD_DIR="$TASK_OUT/products" SYMROOT="$TASK_OUT/build" OBJROOT="$TASK_OUT/obj" build \
   | tee "$TASK_OUT/AAX-build.log"
 TASK_BUNDLE="$TASK_OUT/products/BBIREvan.aaxplugin"
 test -f "$TASK_BUNDLE/Contents/MacOS/BBIREvan"
-lipo -verify_arch arm64 x86_64 "$TASK_BUNDLE/Contents/MacOS/BBIREvan"
+lipo "$TASK_BUNDLE/Contents/MacOS/BBIREvan" -verify_arch arm64 x86_64
 for TASK_FRAME in 0 1 2 3; do test -f "$TASK_BUNDLE/Contents/Resources/Reaction$TASK_FRAME.png"; done
 echo "UNSIGNED DEVELOPMENT AAX: $TASK_BUNDLE"
 echo 'This is not a release package. PACE signing and testing in Pro Tools are still required.'
