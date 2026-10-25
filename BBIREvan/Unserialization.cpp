@@ -55,6 +55,12 @@ void BBIREvan::_UnserializeApplyConfig(nlohmann::json& config)
   OnParamReset(iplug::EParamSource::kPresetRecall);
   LEAVE_PARAMS_MUTEX
 
+  // Preset/session recall replaces startup defaults even when paths are empty
+  // or the saved file is missing. Never substitute an unrelated factory amp.
+  mStagedModel.reset();
+  mStagedIR.reset();
+  mShouldRemoveModel = true;
+  mShouldRemoveIR = true;
   mNAMPath.Set(static_cast<std::string>(config["NAMPath"]).c_str());
   mIRPath.Set(static_cast<std::string>(config["IRPath"]).c_str());
 

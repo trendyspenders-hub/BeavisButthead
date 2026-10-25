@@ -1,7 +1,7 @@
 #define PLUG_NAME "Beavis And Butthead"
 #define PLUG_MFR "I.R.Evan"
-#define PLUG_VERSION_HEX 0x00000200
-#define PLUG_VERSION_STR "0.2.0"
+#define PLUG_VERSION_HEX 0x00000201
+#define PLUG_VERSION_STR "0.2.1"
 #define PLUG_UNIQUE_ID 'BbIr'
 #define PLUG_MFR_ID 'IrEv'
 #define PLUG_URL_STR "https://github.com/sdatkinson/NeuralAmpModelerPlugin"

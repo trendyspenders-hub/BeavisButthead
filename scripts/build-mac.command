@@ -47,10 +47,10 @@ TASK_CONTENT="$TASK_OUT/payload/Library/Application Support/I.R.Evan/Beavis And 
 mkdir -p "$TASK_CONTENT"
 cp -R "$TASK_ROOT/models" "$TASK_CONTENT/models"
 cp "$TASK_ROOT/docs/START-HERE.md" "$TASK_CONTENT/Read-Me.txt"
-pkgbuild --root "$TASK_OUT/payload" --identifier com.IREvan.BBIREvan.installer --version 0.2.0 --install-location / \
-  "$TASK_OUT/disk/Beavis-And-Butthead-by-IR-Evan-0.2.0-unsigned.pkg"
+pkgbuild --root "$TASK_OUT/payload" --identifier com.IREvan.BBIREvan.installer --version 0.2.1 --install-location / \
+  "$TASK_OUT/disk/Beavis-And-Butthead-by-IR-Evan-0.2.1-unsigned.pkg"
 cp "$TASK_ROOT/docs/START-HERE.md" "$TASK_OUT/disk/Read-Me.txt"
 hdiutil create -volname 'Beavis And Butthead by I.R.Evan' -srcfolder "$TASK_OUT/disk" -format UDZO \
-  "$TASK_OUT/Beavis-And-Butthead-by-IR-Evan-0.2.0-unsigned.dmg"
+  "$TASK_OUT/Beavis-And-Butthead-by-IR-Evan-0.2.1-unsigned.dmg"
 echo "Built personal-test packages at: $TASK_OUT"
 echo 'Ad-hoc signed binaries; installer is unsigned and not notarized. DAW validation remains required.'

@@ -11,6 +11,10 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+      - name: Verify factory catalog
+        run: |
+          c++ -std=c++17 tests/factory_library.cpp -o /tmp/factory-test
+          /tmp/factory-test models
       - name: Build universal AU and VST3, PKG and DMG
         run: bash scripts/build-mac.command
       - name: Install test package and validate Audio Unit

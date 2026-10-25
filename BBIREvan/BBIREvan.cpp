@@ -18,6 +18,7 @@
 #include "BBIREvanControls.h"
 #include "IREvanArtwork.h"
 #include "IREvanStateReader.h"
+#include "IREvanFactoryLibrary.h"
 
 using namespace iplug;
 using namespace igraphics;
@@ -201,6 +202,39 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
       pGraphics->LoadBitmap(REACTION0_FN), pGraphics->LoadBitmap(REACTION1_FN),
       pGraphics->LoadBitmap(REACTION2_FN), pGraphics->LoadBitmap(REACTION3_FN)};
     pGraphics->AttachControl(new IREvanArtworkControl(b, kInputLevel, reactionFrames));
+    // Factory captures are available directly, without locating external files.
+    const auto factoryStyle = style.WithLabelText(IText(13, COLOR_WHITE, "Roboto-Regular"));
+    auto selectFactory = [this](const irevan::factory::Entry& entry, bool cabinet) {
+      const auto root = irevan::factory::InstalledRoot();
+      if (!irevan::factory::Available(root, entry)) {
+        _ShowMessageBox(GetUI(),
+          "Factory content is missing. Reinstall the full Mac package, or load a custom file below.",
+          "Factory library unavailable", EMsgBoxType::kMB_OK);
+        return;
+      }
+      const auto path = irevan::factory::Resolve(root, entry).string();
+      WDL_String file(path.c_str());
+      const bool failed = cabinet
+        ? _StageIR(file) != dsp::wav::LoadReturnCode::SUCCESS
+        : !_StageModel(file).empty();
+      if (failed)
+        _ShowMessageBox(GetUI(), "The selected file could not be loaded. Reinstall the factory content.",
+                        "Load failed", EMsgBoxType::kMB_OK);
+    };
+    for (size_t i = 0; i < irevan::factory::amps.size(); ++i) {
+      const float x = 532.f + (i % 3) * 148.f;
+      const float y = 105.f + (i / 3) * 30.f;
+      pGraphics->AttachControl(new IVButtonControl(IRECT(x, y, x + 140, y + 27),
+        [selectFactory, i](IControl*) { selectFactory(irevan::factory::amps[i], false); },
+        irevan::factory::amps[i].name, factoryStyle));
+    }
+    for (size_t i = 0; i < irevan::factory::cabinets.size(); ++i) {
+      const float x = 532.f + i * 148.f;
+      pGraphics->AttachControl(new IVButtonControl(IRECT(x, 177, x + 140, 199),
+        [selectFactory, i](IControl*) { selectFactory(irevan::factory::cabinets[i], true); },
+        irevan::factory::cabinets[i].name, factoryStyle));
+    }
+
     pGraphics->AttachControl(new ISVGControl(modelIconArea, modelIconSVG));
 
 #ifdef NAM_PICK_DIRECTORY
@@ -316,6 +350,21 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
     // pGraphics->GetControlWithTag(kCtrlTagOutNorm)->SetMouseEventsWhenDisabled(false);
     // pGraphics->GetControlWithTag(kCtrlTagCalibrateInput)->SetMouseEventsWhenDisabled(false);
   };
+#ifdef OS_MAC
+  // Load only during construction, never from ProcessBlock or editor opening.
+  // Saved state applied later replaces these defaults, including empty state.
+  const auto root = irevan::factory::InstalledRoot();
+  const auto& amp = irevan::factory::amps[irevan::factory::defaultAmp];
+  const auto& cab = irevan::factory::cabinets[irevan::factory::defaultCabinet];
+  if (irevan::factory::Available(root, amp)) {
+    WDL_String path(irevan::factory::Resolve(root, amp).string().c_str());
+    _StageModel(path);
+  }
+  if (irevan::factory::Available(root, cab)) {
+    WDL_String path(irevan::factory::Resolve(root, cab).string().c_str());
+    _StageIR(path);
+  }
+#endif
 }
 
 BBIREvan::~BBIREvan()
@@ -784,14 +833,15 @@ std::string BBIREvan::_StageModel(const WDL_String& modelPath)
                                + std::to_string(model->NumOutputChannels()));
     }
 
-    std::unique_ptr<ResamplingNAM> temp = std::make_unique<ResamplingNAM>(std::move(model), GetSampleRate());
-    temp->Reset(GetSampleRate(), GetBlockSize());
+    std::unique_ptr<ResamplingNAM> temp = std::make_unique<ResamplingNAM>(std::move(model), GetSampleRate() > 0 ? GetSampleRate() : 48000.0);
+    temp->Reset(GetSampleRate() > 0 ? GetSampleRate() : 48000.0, std::max(1, GetBlockSize()));
     if (nam::SlimmableModel* slimmable = temp->GetSlimmableModel())
     {
       slimmable->SetSlimmableSize(GetParam(kSlim)->Value());
     }
     mStagedModel = std::move(temp);
     mNAMPath = modelPath;
+    mShouldRemoveModel = false;
     SendControlMsgFromDelegate(kCtrlTagModelFileBrowser, kMsgTagLoadedModel, mNAMPath.GetLength(), mNAMPath.Get());
   }
   catch (std::runtime_error& e)
@@ -815,7 +865,7 @@ dsp::wav::LoadReturnCode BBIREvan::_StageIR(const WDL_String& irPath)
   // FIXME it'd be better for the path to be "staged" as well. Just in case the
   // path and the model got caught on opposite sides of the fence...
   WDL_String previousIRPath = mIRPath;
-  const double sampleRate = GetSampleRate();
+  const double sampleRate = GetSampleRate() > 0 ? GetSampleRate() : 48000.0;
   dsp::wav::LoadReturnCode wavState = dsp::wav::LoadReturnCode::ERROR_OTHER;
   try
   {
@@ -832,6 +882,7 @@ dsp::wav::LoadReturnCode BBIREvan::_StageIR(const WDL_String& irPath)
   if (wavState == dsp::wav::LoadReturnCode::SUCCESS)
   {
     mIRPath = irPath;
+    mShouldRemoveIR = false;
     SendControlMsgFromDelegate(kCtrlTagIRFileBrowser, kMsgTagLoadedIR, mIRPath.GetLength(), mIRPath.Get());
   }
   else

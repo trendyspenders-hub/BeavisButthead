@@ -22,9 +22,9 @@ for TASK_FORMAT in Components/BBIREvan.component VST3/BBIREvan.vst3; do
   codesign --force --options runtime --timestamp --sign "$IREVAN_APP_IDENTITY" "$TASK_BUNDLE"
   codesign --verify --deep --strict --verbose=2 "$TASK_BUNDLE"
 done
-TASK_PKG="$TASK_OUT/disk/Beavis-And-Butthead-by-IR-Evan-0.2.0.pkg"
+TASK_PKG="$TASK_OUT/disk/Beavis-And-Butthead-by-IR-Evan-0.2.1.pkg"
 pkgbuild --root "$TASK_OUT/payload" --identifier com.IREvan.BBIREvan.installer \
-  --version 0.2.0 --install-location / --sign "$IREVAN_INSTALLER_IDENTITY" --timestamp "$TASK_PKG"
+  --version 0.2.1 --install-location / --sign "$IREVAN_INSTALLER_IDENTITY" --timestamp "$TASK_PKG"
 pkgutil --check-signature "$TASK_PKG" | tee "$TASK_OUT/installer-signature.txt"
 # notarytool's exit status alone is not the acceptance check.
 xcrun notarytool submit "$TASK_PKG" --keychain-profile "$IREVAN_NOTARY_PROFILE" --wait --output-format json > "$TASK_OUT/pkg-notary.json"
@@ -33,7 +33,7 @@ xcrun stapler staple "$TASK_PKG"
 xcrun stapler validate "$TASK_PKG"
 spctl --assess --type install --verbose=2 "$TASK_PKG"
 cp "$TASK_ROOT/docs/START-HERE.md" "$TASK_OUT/disk/Read-Me.txt"
-TASK_DMG="$TASK_OUT/Beavis-And-Butthead-by-IR-Evan-0.2.0.dmg"
+TASK_DMG="$TASK_OUT/Beavis-And-Butthead-by-IR-Evan-0.2.1.dmg"
 hdiutil create -volname 'Beavis And Butthead by I.R.Evan' -srcfolder "$TASK_OUT/disk" -format UDZO "$TASK_DMG"
 codesign --timestamp --sign "$IREVAN_APP_IDENTITY" "$TASK_DMG"
 xcrun notarytool submit "$TASK_DMG" --keychain-profile "$IREVAN_NOTARY_PROFILE" --wait --output-format json > "$TASK_OUT/dmg-notary.json"

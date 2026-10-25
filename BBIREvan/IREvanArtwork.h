@@ -41,8 +41,8 @@ public:
     g.DrawRect(cream, IRECT(23, 83, 497, 547), nullptr, 3.f);
     g.FillRect(red, IRECT(520, 78, 982, 552));
     g.DrawRect(COLOR_BLACK, IRECT(520, 78, 982, 552), nullptr, 4.f);
-    label("THIS RIFF RULES.", 30, yellow, IRECT(530, 99, 970, 145));
-    label("TURN IT UP. WATCH THEM LOSE IT.", 14, cream, IRECT(530, 152, 970, 177));
+    label("FACTORY AMP CAPTURES", 12, yellow, IRECT(530, 81, 970, 102));
+    label("CABINETS", 11, cream, IRECT(530, 159, 970, 176));
     static const char* states[] = {"WHATEVER.", "HEH HEH.", "THIS RULES!", "FULL HEADBANG."};
     label(states[frame], 25, yellow, IRECT(540, 460, 960, 499));
     label("DRIVE = GAIN INTO YOUR NAM AMP MODEL", 13, cream, IRECT(532, 511, 970, 535));
