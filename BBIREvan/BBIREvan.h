@@ -11,6 +11,7 @@
 #include "Colors.h"
 #include "ToneStack.h"
 #include "IREvanPedalDSP.h"
+#include "IREvanCircuit.h"
 
 #include "IPlug_include_in_plug_hdr.h"
 #include "ISender.h"
@@ -53,6 +54,13 @@ enum EParams
   kEchoActive,
   kEchoTime,
   kEchoMix,
+  kCircuitMode,
+  kCircuitGain,
+  kCircuitBass,
+  kCircuitMiddle,
+  kCircuitTreble,
+  kCircuitMaster,
+  kCircuitBright,
   kNumParams
 };
 
@@ -111,6 +119,11 @@ public:
 
 private:
   IREvanPedalDSP mPedals;
+  irevan::circuit::Engine mCircuit;
+  int mActiveCircuitMode = -1;
+  double mEngineTransition = 1.0, mEngineTransitionFrom = 0.0, mLastEngineSample = 0.0;
+  irevan::circuit::Controls _CircuitControls() const;
+  void _UpdateCircuitUI();
   // Allocates mInputPointers and mOutputPointers
   void _AllocateIOPointers(const size_t nChans);
   // Moves DSP modules from staging area to the main area.

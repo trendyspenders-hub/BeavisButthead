@@ -103,6 +103,13 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
   GetParam(kEchoTime)->InitDouble("EchoTime", 320.0, 80.0, 900.0, 1.0, "ms");
   GetParam(kEchoMix)->InitDouble("EchoMix", 20.0, 0.0, 50.0, 1.0, "%");
 
+  GetParam(kCircuitMode)->InitEnum("AmpEngine", 1, {"NAM", "AB763 Preamp", "2203 Preamp"});
+  GetParam(kCircuitGain)->InitDouble("CircuitGain", 5., 0., 10., .01);
+  GetParam(kCircuitBass)->InitDouble("CircuitBass", 5., 0., 10., .01);
+  GetParam(kCircuitMiddle)->InitDouble("CircuitMiddle", 5., 0., 10., .01);
+  GetParam(kCircuitTreble)->InitDouble("CircuitTreble", 5., 0., 10., .01);
+  GetParam(kCircuitMaster)->InitDouble("CircuitMaster", 5., 0., 10., .01);
+  GetParam(kCircuitBright)->InitBool("CircuitBright", true);
   mNoiseGateTrigger.AddListener(&mNoiseGateGain);
 
   mMakeGraphicsFunc = [&]() {
@@ -176,6 +183,7 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
           ss << "Failed to load NAM model. Message:\n\n" << msg;
           _ShowMessageBox(GetUI(), ss.str().c_str(), "Failed to load model!", kMB_OK);
         }
+        if (msg.empty()) { SendParameterValueFromUI(kCircuitMode, 0.0); _UpdateCircuitUI(); }
         std::cout << "Loaded: " << fileName.Get() << std::endl;
       }
     };
@@ -217,6 +225,7 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
       const bool failed = cabinet
         ? _StageIR(file) != dsp::wav::LoadReturnCode::SUCCESS
         : !_StageModel(file).empty();
+      if (!failed && !cabinet) { SendParameterValueFromUI(kCircuitMode, 0.0); _UpdateCircuitUI(); }
       if (failed)
         _ShowMessageBox(GetUI(), "The selected file could not be loaded. Reinstall the factory content.",
                         "Load failed", EMsgBoxType::kMB_OK);
@@ -286,7 +295,16 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
     pGraphics->AttachControl(new NAMSwitchControl(eqToggleArea, kEQActive, "POST EQ", style, switchHandleBitmap));
 
     // The knobs
-    pGraphics->AttachControl(new NAMKnobControl(inputKnobArea, kInputLevel, "DRIVE", style, knobBackgroundBitmap));
+    pGraphics->AttachControl(new NAMKnobControl(inputKnobArea, kInputLevel, "DRIVE", style, knobBackgroundBitmap), -1, "NAM_DRIVE");
+    const int circuitParams[] = {kCircuitGain, kCircuitBass, kCircuitMiddle, kCircuitTreble, kCircuitMaster, kInputLevel};
+    const char* circuitLabels[] = {"GAIN", "BASS", "MID", "TREBLE", "MASTER", "INPUT TRIM"};
+    for (int i=0; i<6; ++i) {
+      const float x=535.f+(i%3)*145.f, y=207.f+(i/3)*115.f;
+      pGraphics->AttachControl(new NAMKnobControl(IRECT(x,y,x+130,y+109), circuitParams[i], circuitLabels[i], style, knobBackgroundBitmap), -1, "CIRCUIT_CONTROLS")->Hide(true);
+    }
+    pGraphics->AttachControl(new IVTabSwitchControl(IRECT(532,456,971,491), kCircuitMode,
+      {"NAM", "AB763 Preamp", "2203 Preamp"}, "", style.WithLabelText(IText(13, COLOR_WHITE, "Roboto-Regular"))));
+    pGraphics->AttachControl(new IVToggleControl(IRECT(650,497,850,522), kCircuitBright, "BRIGHT", style, "OFF", "ON"), -1, "CIRCUIT_BRIGHT")->Hide(true);
     pGraphics->AttachControl(new NAMKnobControl(noiseGateArea, kNoiseGateThreshold, "GATE", style, knobBackgroundBitmap));
     pGraphics->AttachControl(
       new NAMKnobControl(bassKnobArea, kToneBass, "LOW", style, knobBackgroundBitmap), -1, "EQ_KNOBS");
@@ -411,7 +429,20 @@ void BBIREvan::ProcessBlock(iplug::sample** inputs, iplug::sample** outputs, int
   mPedals.Drive(triggerOutput[0], numFrames, GetParam(kPedalDriveActive)->Bool(),
                 GetParam(kPedalDriveAmount)->Value());
 
-  if (mModel != nullptr)
+  const int circuitMode = GetParam(kCircuitMode)->Int();
+  if (mActiveCircuitMode != circuitMode) {
+    if (circuitMode > 0)
+      mCircuit.Prepare(circuitMode == 1 ? irevan::circuit::Model::AB763 : irevan::circuit::Model::MV2203,
+                       sampleRate, _CircuitControls());
+    mActiveCircuitMode = circuitMode;
+    mEngineTransitionFrom = mLastEngineSample;
+    mEngineTransition = 0.0;
+  }
+  if (circuitMode > 0) {
+    mCircuit.SetControls(_CircuitControls());
+    for (int i=0; i<nFrames; ++i) mOutputPointers[0][i] = mCircuit.Tick(triggerOutput[0][i]);
+  }
+  else if (mModel != nullptr)
   {
     mModel->process(triggerOutput, mOutputPointers, nFrames);
   }
@@ -419,7 +450,12 @@ void BBIREvan::ProcessBlock(iplug::sample** inputs, iplug::sample** outputs, int
   {
     _FallbackDSP(triggerOutput, mOutputPointers, numChannelsInternal, numFrames);
   }
-  // Apply the noise gate after the NAM
+  for (int i=0; i<nFrames; ++i) {
+    mEngineTransition = std::min(1.0, mEngineTransition + 1.0/(std::max(8000.0,sampleRate)*.005));
+    mOutputPointers[0][i] = mEngineTransitionFrom*(1.0-mEngineTransition) + mOutputPointers[0][i]*mEngineTransition;
+    mLastEngineSample = mOutputPointers[0][i];
+  }
+  // Apply the noise gate after the selected engine
   sample** gateGainOutput =
     noiseGateActive ? mNoiseGateGain.Process(mOutputPointers, numChannelsInternal, numFrames) : mOutputPointers;
 
@@ -461,6 +497,11 @@ void BBIREvan::OnReset()
   const auto sampleRate = GetSampleRate();
   const int maxBlockSize = GetBlockSize();
   mPedals.Prepare(sampleRate);
+  mActiveCircuitMode = GetParam(kCircuitMode)->Int();
+  mCircuit.Prepare(mActiveCircuitMode == 2 ? irevan::circuit::Model::MV2203 : irevan::circuit::Model::AB763,
+                   sampleRate, _CircuitControls());
+  mEngineTransition = 1.0;
+  mEngineTransitionFrom = mLastEngineSample = 0.0;
 
   // Tail is because the HPF DC blocker has a decay.
   // 10 cycles should be enough to pass the VST3 tests checking tail behavior.
@@ -551,6 +592,7 @@ int BBIREvan::UnserializeState(const IByteChunk& chunk, int startPos)
 void BBIREvan::OnUIOpen()
 {
   Plugin::OnUIOpen();
+  _UpdateCircuitUI();
 
   if (mNAMPath.GetLength())
   {
@@ -578,6 +620,7 @@ void BBIREvan::OnParamChange(int paramIdx)
 {
   switch (paramIdx)
   {
+    case kCircuitMode: _SetInputGain(); _SetOutputGain(); _UpdateLatency(); break;
     // Changes to the input gain
     case kCalibrateInput:
     case kInputCalibrationLevel:
@@ -602,6 +645,7 @@ void BBIREvan::OnParamChangeUI(int paramIdx, EParamSource source)
 
     switch (paramIdx)
     {
+      case kCircuitMode: _UpdateCircuitUI(); break;
       case kNoiseGateActive:
         pGraphics->ForAllControlsFunc([active](IControl* c) {
           if (c->GetParamIdx() == kNoiseGateThreshold) c->SetDisabled(!active);
@@ -763,7 +807,7 @@ void BBIREvan::_SetInputGain()
 {
   iplug::sample inputGainDB = GetParam(kInputLevel)->Value();
   // Input calibration
-  if ((mModel != nullptr) && (mModel->HasInputLevel()) && GetParam(kCalibrateInput)->Bool())
+  if ((GetParam(kCircuitMode)->Int() == 0) && (mModel != nullptr) && (mModel->HasInputLevel()) && GetParam(kCalibrateInput)->Bool())
   {
     inputGainDB += GetParam(kInputCalibrationLevel)->Value() - mModel->GetInputLevel();
   }
@@ -773,7 +817,7 @@ void BBIREvan::_SetInputGain()
 void BBIREvan::_SetOutputGain()
 {
   double gainDB = GetParam(kOutputLevel)->Value();
-  if (mModel != nullptr)
+  if (GetParam(kCircuitMode)->Int() == 0 && mModel != nullptr)
   {
     const int outputMode = GetParam(kOutputMode)->Int();
     switch (outputMode)
@@ -1039,8 +1083,8 @@ void BBIREvan::_UpdateControlsFromModel()
 
 void BBIREvan::_UpdateLatency()
 {
-  int latency = 0;
-  if (mModel)
+  int latency = GetParam(kCircuitMode)->Int() > 0 ? irevan::circuit::Engine::Latency : 0;
+  if (GetParam(kCircuitMode)->Int() == 0 && mModel)
   {
     latency += mModel->GetLatency();
   }
@@ -1060,6 +1104,26 @@ void BBIREvan::_UpdateMeters(sample** inputPointer, sample** outputPointer, cons
   const int nChansHack = 1;
   mInputSender.ProcessBlock(inputPointer, (int)nFrames, kCtrlTagInputMeter, nChansHack);
   mOutputSender.ProcessBlock(outputPointer, (int)nFrames, kCtrlTagOutputMeter, nChansHack);
+}
+
+irevan::circuit::Controls BBIREvan::_CircuitControls() const
+{
+  return {GetParam(kCircuitGain)->Value()/10., GetParam(kCircuitBass)->Value()/10.,
+          GetParam(kCircuitMiddle)->Value()/10., GetParam(kCircuitTreble)->Value()/10.,
+          GetParam(kCircuitMaster)->Value()/10., GetParam(kCircuitBright)->Bool()};
+}
+
+void BBIREvan::_UpdateCircuitUI()
+{
+  if (auto* ui=GetUI()) {
+    const int mode=GetParam(kCircuitMode)->Int();
+    ui->ForControlInGroup("NAM_DRIVE", [mode](IControl* c) { c->Hide(mode != 0); });
+    ui->ForControlInGroup("CIRCUIT_CONTROLS", [mode](IControl* c) {
+      c->Hide(mode == 0 || (mode == 1 && c->GetParamIdx() == kCircuitMaster));
+    });
+    ui->ForControlInGroup("CIRCUIT_BRIGHT", [mode](IControl* c) { c->Hide(mode != 1); });
+    ui->SetAllControlsDirty();
+  }
 }
 
 // HACK

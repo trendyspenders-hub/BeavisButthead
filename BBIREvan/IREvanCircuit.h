@@ -42,16 +42,16 @@ public:
   void Configure(Model m,double fs,Controls c={}) {
     model=m;sampleRate=fs;controls=c;volts={};y={};history={};failures=0;
     Build();Compile(false);Step(0,false,240);
-    for(int i=0;i<nc;++i)history[i]=-2*sampleRate*capacitors[i].value*Voltage(capacitors[i],0);
+    for(int i=0;i<nc;++i)history[i]=-sampleRate*capacitors[i].value*Voltage(capacitors[i],0);
     Compile(true);
   }
   void SetControls(Controls c){
     const auto old=capacitors;controls=c;Build();
     for(int i=0;i<nc;++i)if(old[i].value!=capacitors[i].value)
-      history[i]=-2*sampleRate*capacitors[i].value*Voltage(capacitors[i],0);
+      history[i]=-sampleRate*capacitors[i].value*Voltage(capacitors[i],0);
     Compile(true);
   }
-  double Tick(double input){Step(input,true,24);return volts[output];}
+  double Tick(double input){Step(input,true,64);return volts[output];}
   double Rail()const{return model==Model::AB763?410.:320.;}
 private:
   Matrix inverse{},impedance{},projection{};Vec base{},inputVector{},y{};
@@ -103,7 +103,7 @@ private:
       if(z>=0){a[z][z]+=g;if(x>=0)a[z][x]-=g;else if(x==Bplus)base[z]+=g*Rail();else if(x==Input)inputVector[z]+=g;}
     };
     for(int i=0;i<nr;++i)stamp(resistors[i].a,resistors[i].b,1/resistors[i].value);
-    if(transient)for(int i=0;i<nc;++i)stamp(capacitors[i].a,capacitors[i].b,2*sampleRate*capacitors[i].value);
+    if(transient)for(int i=0;i<nc;++i)stamp(capacitors[i].a,capacitors[i].b,sampleRate*capacitors[i].value);
     for(int j=0;j<n;++j){Vec rhs{},col{};rhs[j]=1;if(!Solve(a,rhs,col,n)){++failures;return;}for(int i=0;i<n;++i)inverse[i][j]=col[i];}
     for(int p=0;p<2*nt;++p)for(int i=0;i<n;++i)projection[i][p]=(A(p)>=0?inverse[i][A(p)]:0)-(B(p)>=0?inverse[i][B(p)]:0);
     for(int p=0;p<2*nt;++p)for(int q=0;q<2*nt;++q)impedance[p][q]=(A(p)>=0?projection[A(p)][q]:0)-(B(p)>=0?projection[B(p)][q]:0);
@@ -121,14 +121,14 @@ private:
         for(int p=0;p<2*nt;++p){jac[p][2*k]=impedance[p][2*k]*c.dp;jac[p][2*k+1]=impedance[p][2*k]*c.dg+impedance[p][2*k+1]*c.gg;}}
       double error=0;
       for(int p=0;p<2*nt;++p){jac[p][p]+=1;residual[p]=candidate[p]-open[p];for(int q=0;q<2*nt;++q)residual[p]+=impedance[p][q]*curr[q];error=std::max(error,std::abs(residual[p]));}
-      if(error<1e-7){converged=true;break;}
+      if(error<1e-5){converged=true;break;}
       Vec step{};if(!Solve(jac,residual,step,2*nt))break;
-      double damping=1;for(int p=0;p<2*nt;++p)damping=std::min(damping,(p%2?2.:60.)/(std::abs(step[p])+1e-30));
+      double damping=1;for(int p=0;p<2*nt;++p)damping=std::min(damping,(p%2?10.:60.)/(std::abs(step[p])+1e-30));
       for(int p=0;p<2*nt;++p)candidate[p]-=damping*step[p];
     }
     if(!converged){++failures;return;}
     y=candidate;for(int i=0;i<n;++i){volts[i]=linear[i];for(int p=0;p<2*nt;++p)volts[i]-=projection[i][p]*curr[p];}
-    if(transient)for(int i=0;i<nc;++i)history[i]=-4*sampleRate*capacitors[i].value*Voltage(capacitors[i],input)-history[i];
+    if(transient)for(int i=0;i<nc;++i)history[i]=-sampleRate*capacitors[i].value*Voltage(capacitors[i],input);
   }
 };
 class FIR {
@@ -153,7 +153,7 @@ public:
       if(diff(current.gain,old.gain)+diff(current.bass,old.bass)+diff(current.middle,old.middle)+diff(current.treble,old.treble)+diff(current.master,old.master)>1e-5||current.bright!=old.bright)network.SetControls(current);
     }
     input=std::isfinite(input)?std::clamp(input,-20.,20.):0;double out=0;
-    for(int i=0;i<4;++i)out=down.Tick(network.Tick(up.Tick(i==0?input*4:0)));
+    for(int i=0;i<4;++i){double filtered=down.Tick(network.Tick(up.Tick(i==0?input*4:0)));if(i==0)out=filtered;}
     fade=std::min(1.,fade+1/(fs*.01));return out*(network.model==Model::AB763?.02:.03)*fade;
   }
 };

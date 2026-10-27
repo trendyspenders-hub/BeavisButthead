@@ -4,8 +4,8 @@
 #include <limits>
 int main()
 {
-  const std::vector<std::string> all={"Drive","Threshold","Bass","Middle","Treble","Output","NoiseGateActive","ToneStack","IRToggle","CalibrateInput","InputCalibrationLevel","OutputMode","Slim","PedalDriveActive","PedalDriveAmount","EchoActive","EchoTime","EchoMix"};
-  for(int count:{13,18})
+  const std::vector<std::string> all={"Drive","Threshold","Bass","Middle","Treble","Output","NoiseGateActive","ToneStack","IRToggle","CalibrateInput","InputCalibrationLevel","OutputMode","Slim","PedalDriveActive","PedalDriveAmount","EchoActive","EchoTime","EchoMix","AmpEngine","CircuitGain","CircuitBass","CircuitMiddle","CircuitTreble","CircuitMaster","CircuitBright"};
+  for(int count:{13,18,25})
   {
     std::vector<std::string> names(all.begin(),all.begin()+count);
     iplug::IByteChunk full;full.PutStr("amp.nam");full.PutStr("cab.wav");
@@ -34,5 +34,5 @@ int main()
     assert(IREvanReadString(bad,text,0)==-1);
     nlohmann::json out;assert(IREvanReadPathsAndParams(bad,0,out,{"Drive"})==-1);
   }
-  std::cout<<"PASS: 13/18-param byte-chunk round trips, every truncated prefix, invalid offsets, NaN/Inf and malformed string-length rejection, atomic config update.\n";
+  std::cout<<"PASS: 13/18/25-param byte-chunk round trips, every truncated prefix, invalid offsets, NaN/Inf and malformed string-length rejection, atomic config update.\n";
 }

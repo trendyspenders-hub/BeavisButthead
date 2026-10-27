@@ -43,14 +43,13 @@ public:
     g.DrawRect(COLOR_BLACK, IRECT(520, 78, 982, 552), nullptr, 4.f);
     label("FACTORY AMP CAPTURES", 12, yellow, IRECT(530, 81, 970, 102));
     label("CABINETS", 11, cream, IRECT(530, 159, 970, 176));
-    static const char* states[] = {"WHATEVER.", "HEH HEH.", "THIS RULES!", "FULL HEADBANG."};
-    label(states[frame], 25, yellow, IRECT(540, 460, 960, 499));
-    label("DRIVE = GAIN INTO YOUR NAM AMP MODEL", 13, cream, IRECT(532, 511, 970, 535));
+
+    label("CIRCUIT MODES: EXPERIMENTAL PREAMPS", 11, cream, IRECT(532, 529, 970, 548));
     g.FillRect(teal, IRECT(18, 570, 982, 756));
     g.DrawRect(cream, IRECT(18, 570, 982, 756), nullptr, 2.f);
     label("AMP .NAM", 12, cream, IRECT(120, 756, 400, 776));
     label("CABINET .WAV IR", 12, cream, IRECT(610, 756, 890, 776));
-    label("NAM ENGINE  /  NO MODEL LOADED = NO AMP EMULATION", 11, cream, IRECT(24, 815, 976, 836));
+    label("NAM CAPTURES + CIRCUIT PREAMPS  /  POST EQ IS SEPARATE", 11, cream, IRECT(24, 815, 976, 836));
   }
 
 private:

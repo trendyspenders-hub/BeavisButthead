@@ -2,10 +2,27 @@ name: Build I.R.Evan macOS test installer
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [main, circuit-preamp-work]
 permissions:
   contents: read
 jobs:
+  circuit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install circuit reference simulator
+        run: sudo apt-get update -qq && sudo apt-get install -y ngspice
+      - name: Circuit stress and reference tests
+        run: |
+          mkdir -p circuit-results
+          c++ -std=c++17 -O3 -Wall -Wextra -Werror tests/circuit_dsp.cpp -o /tmp/circuit-test
+          /tmp/circuit-test | tee circuit-results/stress.txt
+          python3 tests/circuit_spice.py > circuit-results/spice.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: circuit-results
+          path: circuit-results/
   mac:
     runs-on: macos-14
     timeout-minutes: 45

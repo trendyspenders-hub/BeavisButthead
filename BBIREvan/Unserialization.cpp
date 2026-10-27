@@ -23,6 +23,10 @@
 
 void BBIREvan::_UnserializeApplyConfig(nlohmann::json& config)
 {
+  const nlohmann::json circuitDefaults = {{"AmpEngine",0.0},{"CircuitGain",5.0},{"CircuitBass",5.0},
+    {"CircuitMiddle",5.0},{"CircuitTreble",5.0},{"CircuitMaster",5.0},{"CircuitBright",1.0}};
+  for (auto it=circuitDefaults.begin(); it!=circuitDefaults.end(); ++it)
+    if (!config.contains(it.key())) config[it.key()] = it.value();
   auto getParamByName = [&](std::string& name) {
     // Could use a map but eh
     for (int i = 0; i < kNumParams; i++)
@@ -272,10 +276,10 @@ int BBIREvan::_UnserializeStateWithKnownVersion(const iplug::IByteChunk& chunk, 
   _Version version(versionStr);
   // Act accordingly
   nlohmann::json config;
-  if (version.GetMajor() == 0 && (version.GetMinor() == 1 || version.GetMinor() == 2))
+  if (version.GetMajor() == 0 && (version.GetMinor() >= 1 && version.GetMinor() <= 3))
   {
     std::vector<std::string> names;
-    const int count = version.GetMinor() < 2 ? 13 : kNumParams;
+    const int count = version.GetMinor() == 1 ? 13 : (version.GetMinor() == 2 ? 18 : kNumParams);
     for (int i = 0; i < count; ++i) names.emplace_back(GetParam(i)->GetName());
     pos = _UnserializePathsAndExpectedKeys(chunk, pos, config, names);
     if (pos < 0) return -1;
