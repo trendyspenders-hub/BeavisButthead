@@ -51,7 +51,7 @@ public:
       history[i]=-sampleRate*capacitors[i].value*Voltage(capacitors[i],0);
     Compile(true);
   }
-  double Tick(double input){Step(input,true,64);return volts[output];}
+  double Tick(double input){Step(input,true,512);return volts[output];}
   double Rail()const{return model==Model::AB763?410.:320.;}
 private:
   Matrix inverse{},impedance{},projection{};Vec base{},inputVector{},y{};
@@ -123,7 +123,7 @@ private:
       for(int p=0;p<2*nt;++p){jac[p][p]+=1;residual[p]=candidate[p]-open[p];for(int q=0;q<2*nt;++q)residual[p]+=impedance[p][q]*curr[q];error=std::max(error,std::abs(residual[p]));}
       if(error<1e-5){converged=true;break;}
       Vec step{};if(!Solve(jac,residual,step,2*nt))break;
-      double damping=1;for(int p=0;p<2*nt;++p)damping=std::min(damping,(p%2?10.:60.)/(std::abs(step[p])+1e-30));
+      double damping=1;for(int p=0;p<2*nt;++p)damping=std::min(damping,(transient?(p%2?1.:10.):(p%2?10.:60.))/(std::abs(step[p])+1e-30));
       for(int p=0;p<2*nt;++p)candidate[p]-=damping*step[p];
     }
     if(!converged){++failures;return;}
@@ -134,16 +134,17 @@ private:
 class FIR {
   std::array<double,65> taps{},delay{};int pos=0;
 public:
-  void Reset(){delay={};pos=0;double sum=0;constexpr double pi=3.14159265358979323846;
-    for(int i=0;i<65;++i){double x=i-32.;taps[i]=(x==0?.225:std::sin(pi*.225*x)/(pi*x))*(.42-.5*std::cos(2*pi*i/64)+.08*std::cos(4*pi*i/64));sum+=taps[i];}for(auto& x:taps)x/=sum;}
+  void Reset(int factor){delay={};pos=0;double sum=0;double bandwidth=.9/factor;constexpr double pi=3.14159265358979323846;
+    for(int i=0;i<65;++i){double x=i-32.;taps[i]=(x==0?bandwidth:std::sin(pi*bandwidth*x)/(pi*x))*(.42-.5*std::cos(2*pi*i/64)+.08*std::cos(4*pi*i/64));sum+=taps[i];}for(auto& x:taps)x/=sum;}
   double Tick(double x){delay[pos]=x;double out=0;int j=pos;for(int i=0;i<65;++i){out+=taps[i]*delay[j];if(--j<0)j=64;}if(++pos==65)pos=0;return out;}
 };
 class Engine {
-  Network network;FIR up,down;Controls current{},target{};double fs=48000,fade=0;int count=0;
+  Network network;FIR up,down;Controls current{},target{};double fs=48000,fade=0;int count=0,factor=4;
 public:
-  // Two 65-tap FIRs at 4x: 64 high-rate samples = 16 host samples.
-  static constexpr int Latency=16;
-  void Prepare(Model model,double rate,Controls c={}){fs=std::isfinite(rate)?std::max(8000.,rate):48000;current=target=c;network.Configure(model,fs*4,c);up.Reset();down.Reset();fade=0;count=0;}
+  // Two FIRs contribute 64 internal-rate samples of delay.
+  static int Factor(double rate){return rate<=48000?4:(rate<=96000?2:1);}
+  static int LatencyForRate(double rate){return 64/Factor(rate);}
+  void Prepare(Model model,double rate,Controls c={}){fs=std::isfinite(rate)?std::max(8000.,rate):48000;current=target=c;factor=Factor(fs);network.Configure(model,fs*factor,c);up.Reset(factor);down.Reset(factor);fade=0;count=0;}
   void SetControls(Controls c){target=c;}
   uint64_t Failures()const{return network.failures;}
   double Tick(double input){
@@ -153,7 +154,7 @@ public:
       if(diff(current.gain,old.gain)+diff(current.bass,old.bass)+diff(current.middle,old.middle)+diff(current.treble,old.treble)+diff(current.master,old.master)>1e-5||current.bright!=old.bright)network.SetControls(current);
     }
     input=std::isfinite(input)?std::clamp(input,-20.,20.):0;double out=0;
-    for(int i=0;i<4;++i){double filtered=down.Tick(network.Tick(up.Tick(i==0?input*4:0)));if(i==0)out=filtered;}
+    for(int i=0;i<factor;++i){double filtered=down.Tick(network.Tick(up.Tick(i==0?input*factor:0)));if(i==0)out=filtered;}
     fade=std::min(1.,fade+1/(fs*.01));return out*(network.model==Model::AB763?.02:.03)*fade;
   }
 };

@@ -303,7 +303,7 @@ BBIREvan::BBIREvan(const InstanceInfo& info)
       pGraphics->AttachControl(new NAMKnobControl(IRECT(x,y,x+130,y+109), circuitParams[i], circuitLabels[i], style, knobBackgroundBitmap), -1, "CIRCUIT_CONTROLS")->Hide(true);
     }
     pGraphics->AttachControl(new IVTabSwitchControl(IRECT(532,456,971,491), kCircuitMode,
-      {"NAM", "AB763 Preamp", "2203 Preamp"}, "", style.WithLabelText(IText(13, COLOR_WHITE, "Roboto-Regular"))));
+      {"NAM", "AB763 Preamp", "2203 Preamp"}, "", style.WithLabelText(IText(13, COLOR_WHITE, "Roboto-Regular"))), -1, "ENGINE_SELECTOR");
     pGraphics->AttachControl(new IVToggleControl(IRECT(650,497,850,522), kCircuitBright, "BRIGHT", style, "OFF", "ON"), -1, "CIRCUIT_BRIGHT")->Hide(true);
     pGraphics->AttachControl(new NAMKnobControl(noiseGateArea, kNoiseGateThreshold, "GATE", style, knobBackgroundBitmap));
     pGraphics->AttachControl(
@@ -1083,7 +1083,7 @@ void BBIREvan::_UpdateControlsFromModel()
 
 void BBIREvan::_UpdateLatency()
 {
-  int latency = GetParam(kCircuitMode)->Int() > 0 ? irevan::circuit::Engine::Latency : 0;
+  int latency = GetParam(kCircuitMode)->Int() > 0 ? irevan::circuit::Engine::LatencyForRate(GetSampleRate()) : 0;
   if (GetParam(kCircuitMode)->Int() == 0 && mModel)
   {
     latency += mModel->GetLatency();
@@ -1117,6 +1117,7 @@ void BBIREvan::_UpdateCircuitUI()
 {
   if (auto* ui=GetUI()) {
     const int mode=GetParam(kCircuitMode)->Int();
+    ui->ForControlInGroup("ENGINE_SELECTOR", [this](IControl* c) { c->SetValueFromDelegate(GetParam(kCircuitMode)->GetNormalized()); });
     ui->ForControlInGroup("NAM_DRIVE", [mode](IControl* c) { c->Hide(mode != 0); });
     ui->ForControlInGroup("CIRCUIT_CONTROLS", [mode](IControl* c) {
       c->Hide(mode == 0 || (mode == 1 && c->GetParamIdx() == kCircuitMaster));

@@ -19,6 +19,11 @@ int main(){using namespace irevan::circuit;constexpr double pi=3.141592653589793
     track=false;if(e.Failures()){std::cerr<<"convergence failure "<<int(m)<<" "<<fs<<" "<<knob<<" count "<<e.Failures()<<"\n";return 1;}
     assert(peak<20);if(knob>0)assert(peak>1e-5);++cases;
   }
+  for(auto m:{Model::AB763,Model::MV2203})for(double rate:{44100.,48000.,96000.,192000.}){
+    Engine e;e.Prepare(m,rate,{1,1,1,1,1,true});track=true;
+    for(int i=0;i<4000;++i){double x=e.Tick(20*std::sin(i*.1));assert(std::isfinite(x));assert(std::abs(x)<20);}
+    track=false;if(e.Failures()){std::cerr<<"Overload failures: model="<<int(m)<<" rate="<<rate<<" count="<<e.Failures()<<"\n";return 1;}++cases;
+  }
   for(auto m:{Model::AB763,Model::MV2203}){
     Engine a,b;a.Prepare(m,48000);b.Prepare(m,48000);std::vector<double> ref(6000),output(6000);
     for(int i=0;i<6000;++i)ref[i]=a.Tick(.1*std::sin(i*.08));
