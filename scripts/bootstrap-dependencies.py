@@ -7,7 +7,12 @@ with tempfile.TemporaryDirectory(prefix='bbirevan-deps-') as tmp:
  source=Path(tmp)/'upstream'
  subprocess.run(['git','clone','--no-checkout','https://github.com/sdatkinson/NeuralAmpModelerPlugin.git',str(source)],check=True)
  subprocess.run(['git','checkout','--detach',commit],cwd=source,check=True)
- subprocess.run(['git','submodule','update','--init','--recursive'],cwd=source,check=True)
+ # Google's Eigen mirror serves the same pinned submodule commit objects.
+ # Rewrite both upstream spellings, including the nested NAMCore dependency.
+ subprocess.run(['git',
+  '-c','url.https://eigen.googlesource.com/mirror.insteadOf=https://gitlab.com/libeigen/eigen.git',
+  '-c','url.https://eigen.googlesource.com/mirror.insteadOf=https://gitlab.com/libeigen/eigen',
+  'submodule','update','--init','--recursive'],cwd=source,check=True)
  for name in ['iPlug2','eigen','AudioDSPTools','NeuralAmpModelerCore']:
   if (root/name).exists(): raise SystemExit(f'Refusing to replace existing dependency: {name}')
   shutil.copytree(source/name,root/name,ignore=shutil.ignore_patterns('.git'),symlinks=True)
