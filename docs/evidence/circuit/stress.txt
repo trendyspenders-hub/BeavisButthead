@@ -1,0 +1,1 @@
+PASS 32 circuit rate/control stress cases; convergence, silence, reset, block independence, moving controls and no audio allocations. Seconds=1.21106

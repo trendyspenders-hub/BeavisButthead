@@ -1,0 +1,56 @@
+[
+  {
+    "model": "AB763 preamp",
+    "input_peak_volts": 0.01,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 4.7420085422800184e-05,
+    "relative_rms_error": 0.00871823886676909,
+    "peak_error_volts": 0.0019659539006213755,
+    "samples": 11521
+  },
+  {
+    "model": "AB763 preamp",
+    "input_peak_volts": 0.5,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 4.7420085422800184e-05,
+    "relative_rms_error": 0.008737638759446447,
+    "peak_error_volts": 0.10441291897267746,
+    "samples": 11521
+  },
+  {
+    "model": "AB763 preamp",
+    "input_peak_volts": 2.0,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 4.7420085422800184e-05,
+    "relative_rms_error": 0.010102846309710064,
+    "peak_error_volts": 0.6146206952695223,
+    "samples": 11521
+  },
+  {
+    "model": "2203 preamp",
+    "input_peak_volts": 0.01,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 2.1799451133119874e-11,
+    "relative_rms_error": 0.0040284552101263835,
+    "peak_error_volts": 0.001216080466438424,
+    "samples": 11521
+  },
+  {
+    "model": "2203 preamp",
+    "input_peak_volts": 0.5,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 2.1799451133119874e-11,
+    "relative_rms_error": 0.011833467620638069,
+    "peak_error_volts": 0.09807627214037051,
+    "samples": 11521
+  },
+  {
+    "model": "2203 preamp",
+    "input_peak_volts": 2.0,
+    "internal_rate": 192000,
+    "dc_max_error_volts": 2.1799451133119874e-11,
+    "relative_rms_error": 0.024724341053902695,
+    "peak_error_volts": 0.44407137929058627,
+    "samples": 11521
+  }
+]

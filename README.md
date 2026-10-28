@@ -1,15 +1,15 @@
 # Beavis And Butthead by I.R.Evan
 
-## Mac test installer available
+## 0.3.0 circuit-preamp test edition
 
-[Download the Mac installer artifact](https://github.com/trendyspenders-hub/BeavisButthead/actions/runs/40120416123/artifacts/12571770280) (GitHub sign-in may be required). Unzip, open the DMG and run the PKG inside. The artifact also contains the same standalone PKG.
+Two experimental circuit preamps — **AB763 Normal** and **1978 2203 high input** — run independently of external NAM files. New instances select AB763. The six factory NAM captures and three cabinet IRs remain available; factory amp buttons switch back to NAM. Older sessions retain NAM mode.
 
-Includes AU and VST3 for Apple Silicon and Intel, six NAM amp captures and three cabinet IRs. Select models from `/Library/Application Support/I.R.Evan/Beavis And Butthead/models` in the plug-in's model and cabinet browsers.
+These are component-network **preamps**, not complete amplifier replicas. Power stages, phase inverters, transformers, sag and feedback are omitted. Generic tube parameters and some circuit loads are approximated. See [circuit implementation and limitations](docs/CIRCUIT-ENGINE.md).
 
-Both native builds, installer creation, installation on macOS 14.8.9 and Apple's Audio Unit validation passed. VST3 compiled but its separate host validator was not run. The plug-in bundles are ad-hoc signed; the installer is unsigned and not Apple-notarized. Pro Tools/AAX is excluded. Native Intel DAW and full music-session testing remain outstanding.
+Universal Apple Silicon/Intel AU and VST3 are packaged by [GitHub Actions](https://github.com/trendyspenders-hub/BeavisButthead/actions/workflows/build-irevan.yml). Download the installer artifact from a successful run, unzip, open the DMG and run its PKG. GitHub sign-in may be required. Pro Tools/AAX is excluded.
 
-The older source-package documentation inside the test installer predates the successful Mac build; this README and `docs/evidence/mac-installer-validation.json` record the current status.
+Plug-in bundles are ad-hoc signed. The installer is unsigned and not Apple-notarized. AU validation, circuit stress/SPICE tests, and other recorded checks are described in `docs/evidence`; separate VST3 host validation, manual DAW GUI/listening tests and physical-amplifier comparisons remain outstanding.
 
 ## Build
 
-On macOS with full Xcode, run `bash scripts/build-mac.command`. It fetches pinned engine dependencies and unchanged original resources. The GitHub Actions workflow builds the universal test installers and validates the installed AU. See `docs/FINISH-RELEASE.md` for Developer ID signing and notarization. No signing secrets belong in this repository.
+On macOS with full Xcode, run `bash scripts/build-mac.command`. It fetches pinned dependencies and resources, builds both architectures and packages AU/VST3. The workflow installs the package and validates the registered Audio Unit. See [installation notes](docs/START-HERE.md) and [release signing](docs/FINISH-RELEASE.md). No signing secrets belong in this repository.
