@@ -1,0 +1,44 @@
+{
+  "version": "0.3.0",
+  "source_commit": "d698501e10310e58d9347a8448149b8ccedacf41",
+  "ci_run": "https://github.com/trendyspenders-hub/BeavisButthead/actions/runs/40744945214",
+  "circuit_stress": {
+    "status": "PASS",
+    "cases": 32,
+    "rates_hz": [
+      44100,
+      48000,
+      96000,
+      192000
+    ]
+  },
+  "spice": {
+    "status": "PASS",
+    "cases": 6,
+    "maximum_relative_rms_error": 0.024724341053902695,
+    "maximum_dc_error_volts": 4.7420085422800184e-05,
+    "scope": "Independent numerical solver; shared component ledger and device equations, not physical hardware validation."
+  },
+  "sanitizers": {
+    "address": "PASS",
+    "undefined_behavior": "PASS",
+    "leak": "NOT RUN: LeakSanitizer unsupported in this execution environment"
+  },
+  "nam_chain": {
+    "status": "PASS",
+    "cases": 288
+  },
+  "pedals": "PASS",
+  "factory_catalog": "PASS",
+  "state_reader": "PASS: 13/18/25 parameters; truncation and malformed input",
+  "mac_build": "PASS: universal arm64/x86_64 AU and VST3",
+  "installed_au": "PASS: package installed, AU VALIDATION SUCCEEDED, component version 0.3.0",
+  "vst3_host_validator": "NOT RUN",
+  "manual_daw_gui_listening": "NOT RUN",
+  "hardware_amp_comparison": "NOT RUN",
+  "installer_signing": "unsigned, non-notarized; bundles ad-hoc signed",
+  "aax": "EXCLUDED",
+  "dmg_sha256": "15d1203304c2f014801f7e85f5224df3b1a2b0ac89797495eb81a9850a939609",
+  "installer_artifact_id": 12840249992,
+  "validation_date": "2026-10-28"
+}

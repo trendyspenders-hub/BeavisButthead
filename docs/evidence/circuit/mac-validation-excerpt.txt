@@ -1,0 +1,12 @@
+2026-10-28T18:29:33.5148400Z ** BUILD SUCCEEDED **
+2026-10-28T18:37:24.4981600Z ** BUILD SUCCEEDED **
+2026-10-28T18:37:53.3472600Z installer: Package name is Beavis-And-Butthead-by-IR-Evan-0.3.0-unsigned
+2026-10-28T18:37:53.3480910Z installer: Installing at base path /
+2026-10-28T18:37:53.3485930Z installer: The install was successful.
+2026-10-28T18:37:54.2300190Z /Library/Audio/Plug-Ins/Components/BBIREvan.component: valid on disk
+2026-10-28T18:37:54.2316240Z /Library/Audio/Plug-Ins/Components/BBIREvan.component: satisfies its Designated Requirement
+2026-10-28T18:37:55.0203260Z /Library/Audio/Plug-Ins/VST3/BBIREvan.vst3: valid on disk
+2026-10-28T18:37:55.0213240Z /Library/Audio/Plug-Ins/VST3/BBIREvan.vst3: satisfies its Designated Requirement
+2026-10-28T18:37:56.6864450Z Component Version: 0.3.0 (0x300)
+2026-10-28T18:37:58.7938820Z AU VALIDATION SUCCEEDED.
+2026-10-28T18:37:58.8367260Z VST3 validation NOT RUN: set IREVAN_VST3_VALIDATOR to the SDK validator executable.

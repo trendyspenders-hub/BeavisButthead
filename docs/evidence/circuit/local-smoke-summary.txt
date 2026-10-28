@@ -1,0 +1,6 @@
+PASS: exact reset bypass, drive signal change, echo timing/feedback, reset silence, block independence, no Process allocations at 44.1/48/96/192 kHz.
+PASS 32 circuit rate/control stress cases; convergence, silence, reset, block independence, moving controls and no audio allocations. Seconds=2.04137
+Factory paths, defaults and missing-library detection passed
+PASS: 13/18/25-param byte-chunk round trips, every truncated prefix, invalid offsets, NaN/Inf and malformed string-length rejection, atomic config update.
+PASS: 288 integrated chain cases (gate, drive, model/resampler, EQ, real cabinet IR, echo, DC blocker).
+PASS 32 circuit rate/control stress cases; convergence, silence, reset, block independence, moving controls and no audio allocations. Seconds=9.77396

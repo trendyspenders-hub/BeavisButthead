@@ -2,6 +2,8 @@
 
 ## 0.3.0 circuit-preamp test edition
 
+[Download the Mac installer artifact](https://github.com/trendyspenders-hub/BeavisButthead/actions/runs/40744945214/artifacts/12840249992). Universal AU/VST3 builds, package installation and installed Audio Unit validation passed on the macOS 15 runner. [Validation record](docs/evidence/circuit-release-validation.json).
+
 Two experimental circuit preamps — **AB763 Normal** and **1978 2203 high input** — run independently of external NAM files. New instances select AB763. The six factory NAM captures and three cabinet IRs remain available; factory amp buttons switch back to NAM. Older sessions retain NAM mode.
 
 These are component-network **preamps**, not complete amplifier replicas. Power stages, phase inverters, transformers, sag and feedback are omitted. Generic tube parameters and some circuit loads are approximated. See [circuit implementation and limitations](docs/CIRCUIT-ENGINE.md).
